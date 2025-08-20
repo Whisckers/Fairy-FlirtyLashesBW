@@ -448,3 +448,69 @@ nav ul li a:hover::after{
     color: white;
     font-size: 24px;
 }
+/* MOBILE / RESPONSIVE STYLES */
+@media screen and (max-width: 768px) {
+
+    /* Header adjustments */
+    .header {
+        height: 80vh;
+        background-size: cover;
+    }
+
+    /* Logo adjustments */
+    .logo-text img:first-child {
+        width: 120px;
+    }
+
+    .logo-text img:last-child {
+        width: 200px;
+        margin-left: 20px;
+    }
+
+    /* Navigation menu */
+    nav ul li {
+        display: block;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    /* Headings */
+    .head h1 {
+        font-size: 40px;
+    }
+
+    /* Collection / services */
+    .collection-flex {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .flex-sides {
+        max-width: 100%;
+        min-width: 100%;
+    }
+
+    .overlay h2 {
+        font-size: 24px;
+        padding-top: 10%;
+    }
+
+    .overlay p {
+        font-size: 16px;
+        padding-left: 15px;
+    }
+
+    /* Buttons */
+    .button, .button3 {
+        padding: 12px 25px;
+        font-size: 16px;
+        margin-left: 0;
+    }
+
+    /* Footer adjustments */
+    .footer {
+        flex-direction: column;
+        height: auto;
+        padding: 20px;
+    }
+}
