@@ -1,0 +1,688 @@
+/* Roboto font family link  */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+
+/* Philosopher font family link  */
+@import url('https://fonts.googleapis.com/css2?family=Philosopher:wght@400;700&display=swap');
+/* font-family: 'Philosopher', sans-serif; */
+
+*{
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: none;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+.header{
+    width: 100%;
+    height: 100;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.1)),url("Makeup images/cover3a.jpeg");
+    background-position: center;
+    margin-top: 0px; /* increase value to push it lower */
+    background-size: cover;
+    object-fit: cover;
+    
+}
+.logo-text {
+  display: flex;
+  align-items: center;
+  gap: 15px; /* space between logo and text */
+}
+.logo-text img:first-child {
+  width: 180px;
+  height: auto;
+}
+
+.logo-text img:last-child {
+  width: 350px;
+  height: auto;
+  margin-left: 290px;
+}
+
+@font-face {
+  font-family: 'Amperzand';
+  src: url('fonts/Amperzand.ttf') format('truetype'); /* adjust path if needed */
+  font-weight: normal;
+  font-style: normal;
+}
+
+.brand-name {
+  font-family: 'Amperzand', cursive;
+  font-size: 2.8rem;      /* make it big next to logo */
+  color: #ff69b4;         /* hot pink */
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.5); /* glowing */
+  letter-spacing: 2px;    /* elegant spacing */
+}
+
+.fancy-title {
+  font-family: 'Harrington', 'Curlz MT', cursive; /* fallback decorative fonts */
+  font-size: 36px;
+  color: #d63384; /* pinkish shade to match your logo */
+  text-align: center;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.2); /* soft glow */
+  letter-spacing: 2px;
+  margin-top: 20px;
+}
+
+nav{
+    display: flex;
+    padding: 2% 5%;
+}
+nav ul{
+    text-align: right;
+    flex: 1;
+}
+nav ul li{
+    display: inline-block;
+    padding: 16px 14px;
+}
+nav ul li a{
+    color: #ff69b4;
+    font-weight: bold;
+    font-size: 16px;
+}
+nav ul li a:hover{
+    color: #e41e45;
+}
+nav ul li a::after{
+    content: "";
+    width: 0;
+    height: 2px;
+    display: block;
+    background-color: #e41e45;
+    transition: .5s;
+}
+nav ul li a:hover::after{
+    width: 100%;
+}
+.home{
+    color: #e41e45;
+    font-weight: bold;
+         text-shadow:
+    1px 1px 2px black,   /* shadow outline */
+    0 0 5px purple,     /* pink glow */
+    0 0 10px purple;
+}   
+.home::after{
+    content: "";
+    width: 100%;
+    height: 2px;
+    background-color: #e41e45;
+    
+}
+.button{
+    border: 2px solid purple;
+    padding: 15px 30px;
+    color: white;
+    font-family: 'Philosopher', sans-serif;
+    font-style: italic;
+    letter-spacing: 2px;
+    font-size: 18px;
+    border-radius: 10px;
+    margin-left: 40px;
+}
+.button:hover{
+    background-color: purple;
+    transition: .5s;
+}
+.head{
+    color: white;
+    margin-top: 20%;
+    margin-left: 6%;
+    padding-bottom:10%;
+}
+.head h3{
+    font-family: 'Philosopher', sans-serif;
+    color: #e41e45;
+    font-size: 32px;
+    font-weight: 300;
+      text-shadow:
+    1px 1px 2px black,   /* shadow outline */
+    0 0 5px #ffffff,     /* pink glow */
+    0 0 10px #ffffff;
+}
+.head h1{
+    font-family: 'Philosopher', sans-serif;
+    padding-top: 20px;
+    font-size: 50px;
+    font-weight: 500;
+    letter-spacing: 2px;
+      text-shadow:
+    1px 1px 2px black,   /* shadow outline */
+    0 0 5px #e41e45,     /* pink glow */
+    0 0 10px #e41e45;
+}
+.head p{
+    font-size: 25px;
+    font-weight: 400;
+    padding-top: 250px;
+     line-height: 1.4; /* reduces space between lines */
+     color: #e41e45;
+     font-weight: bold;
+    margin-bottom: 5%;
+      text-shadow:
+    1px 1px 2px black,   /* shadow outline */
+    0 0 5px #ffffff,     /* pink glow */
+    0 0 10px #ffffff;
+}
+.head .button{
+    margin-left: 0;
+    margin-right: 25px;
+}
+.button2{
+    border: 2px solid white;
+}
+.button2:hover{
+    background-color: white;
+    color: #e41e45;
+}
+
+/* Studio Section  */
+.studio{
+    display: flex;
+    margin-top: 5%;
+}
+
+.studio-oneside{
+    display: flex;
+}
+.imgs img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 3 / 4; /* maintains vertical portrait layout */
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.9s ease;
+border: 3px solid #e41e45;
+}
+
+.imgs img:hover{
+    transform: scale(1.2);
+    transition: .9s;
+}
+.model1{
+    margin-left: 120px;
+}
+.img img{
+    margin-top: 70px;
+}
+.imgs:nth-child(even) {
+    margin-top: 30px;
+}
+
+.studio-oneside {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 0 80px;
+}
+
+
+.studio-otherside{
+    margin-top: 10%;
+    margin-left: 10%;
+}
+.studio-otherside h2{
+    font-family: 'Philosopher', sans-serif;
+    color: #e41e45;
+    font-size: 32px;
+    font-weight: 300;
+            text-shadow:
+    1px 1px 2px black,   /* shadow outline */
+    0 0 5px #e41e45,     /* pink glow */
+    0 0 10px #e41e45;
+}
+.studio-otherside h1{
+    font-family: 'Philosopher', sans-serif;
+    padding-top: 20px;
+    font-size: 50px;
+    font-weight: 500;
+    letter-spacing: 2px;
+}
+.studio-otherside p{
+    font-size: 20px;
+    font-weight: 400;
+    padding-top: 28px;
+    line-height: 1.5;
+    font-family: 'Philosopher', sans-serif;
+    color: lightslategray;
+    margin-bottom: 15%;
+      text-align: justify;
+       margin-left: -100px; /* shift left */
+  margin-right: 10px; /* add space on the right if needed */
+}
+.studio-otherside .button{
+    margin-left: 0;
+    color: #e41e45;
+}
+.studio-otherside .button:hover{
+    color: white;
+}
+
+/* Services Section  */
+.services{
+    background-color: #e0b8ce6c;
+    
+    font-family: 'Philosopher', sans-serif;
+      font-weight: bolder;
+  min-height: auto;
+   margin-top: 40px;         /* Reduced from 20% */
+  padding: 30px 30px 60px;  /* Top padding reduced from 60px to 30px */
+  overflow: hidden;
+  box-sizing: border-box;
+}
+.services-cards {
+  display: flex;
+  flex-wrap: nowrap;      /* Prevent wrapping to next line */
+  justify-content: center; /* Center cards horizontally */
+  gap: 10px;              /* Space between cards */
+  overflow-x: hidden;       /* Add horizontal scroll if needed on small screens */
+  padding: 10px 0;
+}
+
+.service-box p,
+.service-item p {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  text-align: justify;
+  margin-bottom: 20px;
+}
+
+.services h2 {
+  font-size: 50px;
+  font-family: 'Philosopher', sans-serif;
+  text-align: center;
+  padding-top: 0px;       /* 🔽 Reduced from 20px or 8% */
+  margin-top: 0;          /* 🔽 Removes any top margin */
+  margin-bottom: 40px;    /* 🔼 Adds more space below the heading */
+  color: #e41e45;
+
+        text-shadow:
+    1px 1px 2px black,   /* shadow outline */
+    0 0 5px #e41e45,     /* pink glow */
+    0 0 10px #e41e45;
+}
+
+.services h4{
+    font-family: 'Philosopher', sans-serif;
+    text-align: center;
+    padding-top: 10px;
+    font-weight: 400;
+    font-weight: bolder;
+    letter-spacing: 1px;
+}
+/* Base Card Styles (common) */
+.card {
+  background-color: #fff;
+  border: 2px solid purple;
+  border-radius: 30px;
+  box-sizing: border-box;
+  text-align: center;
+  width: 320px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: 0.6s;
+  padding: 25px;
+        text-shadow:
+    1px 1px 2px black,   /* shadow outline */
+    0 0 5px #e41e45,     /* pink glow */
+    0 0 10px #e41e45;
+}
+
+/* Image Cards Specific */
+.image-cards .card {
+  min-height: auto; /* no fixed tall height */
+  padding: 15px 20px;
+}
+
+.card img.service-img {
+  object-fit: contain; /* instead of cover */
+  height: 240px; /* or adjust as needed */
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  background-color: #f0f0f0; /* optional, to show background if image is smaller */
+  
+}
+
+
+/* Text-only Cards Specific */
+.text-cards .card {
+  min-height: 850px; /* keep height for text content */
+  padding: 25px;
+}
+
+
+
+.background{
+    width: 100%;
+    height: 60vh;
+    background-image:linear-gradient(rgba(255, 0, 0, 0.665),rgba(248, 4, 4, 0.664)), url(GlitterBG-free-img.jpg);
+    background-position: center center;
+    background-size: cover;
+    object-fit: cover;
+    background-repeat: repeat;
+    background-attachment: fixed;
+    padding: 6% 40px;
+    background-color: #e41e45;
+}
+.sides{
+    display: flex;
+}
+.front-side img{
+    width: 100px;
+    margin-top: 10px;
+}
+.mid-side{
+    padding-left: 40px;
+    padding-top: 20px;
+    color: white;
+}
+.mid-side h1{
+    font-family: 'Philosopher', sans-serif;
+    font-size: 39px;
+}
+.mid-side h2{
+    font-family: 'Philosopher', sans-serif;
+    font-size: 19px;
+    padding-top: 10px;
+}
+.last-side{
+    margin-top: 50px;
+    margin-left: 40px;
+}
+.button3{
+    border: 2px solid white;
+    padding: 18px 38px;
+    color: white;
+    font-family: 'Philosopher', sans-serif;
+    font-style: italic;
+    font-size: 18px;
+    border-radius: 10px;
+}
+.button3:hover{
+    color: #e41e45;
+    background-color: white;
+    transition: .5s;
+}
+
+.ggd{
+    width: 90%;
+    height: 40vh;
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(pricing-bg.jpg);
+    background-position: center;
+    background-size: cover;
+    color: white;
+    text-align: center;
+    padding-top: 6%;
+    margin-top: 4%;
+    margin-left: 4%;
+    margin-right: 5%;
+    border-radius: 10px;
+}
+.ggd h1{
+    font-size: 42px;
+    font-family: 'Philosopher', sans-serif;
+    padding-bottom: 20px;
+}
+.ggd h3{
+    font-family: 'Philosopher', sans-serif;
+    font-size: 18px;
+}
+.daily-services{
+    margin-top: 1%;
+}
+
+.daily-services .card{
+    height: 142vh;
+}
+.daily-services .card:hover{
+    background-color: black;
+    color: white;
+    transition: .5s;
+}
+.daily-services .card h1{
+    font-size: 40px;
+    padding: 12px 0;
+    color: rgb(32, 32, 255);
+    margin-bottom: 20px;
+}
+.daily-services .card span{
+    content: "";
+    width: 30%;
+    height: 1px;
+    display: inline-flex;
+    background-color: #e41e45;
+    margin-bottom: 30px;
+}
+.daily-services .card h3{
+    font-size: 22px;
+    font-family: 'Philosopher', sans-serif;
+    letter-spacing: 2px;
+    padding-bottom: 7px;
+    font-weight: 400;
+}
+.daily-services .card h5{
+    font-size: 18px;
+    font-family: 'Philosopher', sans-serif;
+    font-weight: 300;
+    color: #e41e45;
+}
+
+.testimonial{
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    margin-top: 10%;
+
+}
+.testimonial h1{
+    font-size: 26px;
+    letter-spacing: 2px;
+    color: #e41e45;
+    font-family: 'Philosopher', sans-serif;
+    padding-bottom: 20px;
+     text-shadow:
+    1px 1px 2px black,   /* shadow outline */
+    0 0 5px #e41e45,     /* pink glow */
+    0 0 10px #e41e45;
+}
+.icons i{
+    border-radius: 80px;
+    border: 2px solid #e41e45;
+    color: #e41e45;
+    font-size: 22px;
+    padding: 10px 10px;
+    margin-left: 10px;
+     text-shadow:
+    1px 1px 2px black,   /* shadow outline */
+    0 0 5px #e41e45,     /* pink glow */
+    0 0 10px #e41e45;
+}
+.icons i:hover{
+    background-color: #e41e45;
+    color: white;
+}
+.testimonial img{
+    margin-top: 5%;
+    border-radius: 50%;
+    position: relative;
+    border: 3px solid #e41e45;     /* You can change color/width */
+  border-radius: 120px;         /* Rounded corners, optional */
+  width: 350px;
+  height: fit-content;
+}
+.quote{
+    position: absolute;
+    top: 637%;
+    left: 50%;
+    width: 1em;
+    height: 1em;
+    color: #e41e45;
+    transform: scale(3.8);
+     text-shadow:
+    1px 1px 2px black,   /* shadow outline */
+    0 0 5px #e41e45,     /* pink glow */
+    0 0 10px #e41e45;
+}
+.testimonial p{
+    font-size: 20px;
+    font-weight: 300;
+    padding-top: 20px;
+    line-height: 1.8;
+    color: grey;
+    margin-bottom: 30px;
+    margin-top: 50px;
+    font-family: 'Philosopher', sans-serif;
+         text-shadow:
+    1px 1px 2px black,   /* shadow outline */
+    0 0 5px #e41e45,     /* pink glow */
+    0 0 10px #e41e45;
+}
+.testimonial h3{
+    margin-bottom: 60px;
+    font-weight: 600;
+    font-family: 'Philosopher', sans-serif;
+    color: #e41e45;
+     text-shadow:
+    1px 1px 2px black,   /* shadow outline */
+    0 0 5px #e41e45,     /* pink glow */
+    0 0 10px #e41e45;
+}
+
+/* Footer Section  */
+.footer{
+    background-color: #1a1a1a;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    padding-top: 6%;
+    padding-left: 80px;
+    padding-right: 40px;
+    color: white;
+}
+.footer h1{
+    font-size: 32px;
+    letter-spacing: 2px;
+    color:  #e41e45;
+    font-family: 'Philosopher', sans-serif;
+    padding-bottom: 30px;
+    padding-top: 40px;
+     text-shadow:
+    1px 1px 2px black,   /* shadow outline */
+    0 0 5px purple,     /* pink glow */
+    0 0 10px purple;
+}
+.footer p{
+    font-size: 16px;
+    font-weight: 300;
+    padding-top: 20px;
+    line-height: 1.6;
+    font-family: 'Philosopher', sans-serif;
+}
+.footer h3{
+    padding: 4px 0;
+    font-family: 'Philosopher', sans-serif;
+    font-weight: 300;
+}
+
+.btn{
+    background-color: white;
+    width: 70%;
+    height: 10vh;
+    font-size: 18px;
+    padding-right: 40%;
+    font-family: 'Philosopher', sans-serif;
+    margin-top: 50px;
+    border-radius: 5px;
+}
+.btn1{
+    background-color:  #e41e45;
+    width: 29%;
+    height: 10vh;
+    font-size: 16px;
+    font-family: 'Philosopher', sans-serif;
+    border-radius: 3px;
+    color: white;
+            text-shadow:
+    1px 1px 2px black,   /* shadow outline */
+    0 0 5px  #e41e45,     /* pink glow */
+    0 0 10px  #e41e45;
+}
+.btn1:hover{
+    background-color: #e41e45;
+    transition: .5s;
+}
+.footer-mid-side{
+    margin: 0 60px;
+}
+.footer-mid-side li{
+    padding-bottom: 10px;
+}
+.footer-mid-side li a{
+    color: white;
+}
+.footer-mid-side li a:hover{
+    color:  #e41e45;
+}
+.footer-mid-side .icons i{
+    margin-left: 0;
+    border: 2px solid white;
+    margin-right: 20px;
+}
+.copyright{
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    background-color: #1a1a1a;
+    height: 100px;
+    padding: 22px 0;
+    border-top: 1px solid gainsboro;
+}
+.copyright h1{
+    font-family: 'Philosopher', sans-serif;
+    color: white;
+    font-size: 24px;
+}
+.testimonial-slider .slide {
+  display: none; /* hide all slides */
+  padding: 30px; /* more padding for more height */
+  border: 1px solid #e41e45;
+  margin: 20px auto;
+  height: 280px; /* increased width */
+  min-width: 300px; /* ensures taller boxes */
+  background: #fff;
+  box-shadow: 0 0 15px #e41e45;
+  border-radius: 10px;
+  font-size: 18px; /* make text bigger */
+      color: #000000;
+     text-shadow:
+    1px 1px 2px black,   /* shadow outline */
+    0 0 5px #e41e45,     /* pink glow */
+    0 0 10px #e41e45;
+}
+
+.testimonial-slider .slide.active {
+  display: block; /* show active slide */
+}
+
+/* Style buttons */
+.testimonial-slider button.prev,
+.testimonial-slider button.next {
+  cursor: pointer;
+  background: #f4a261;
+  border: none;
+  padding: 12px 24px;
+  margin: 15px;
+  border-radius: 5px;
+  font-size: 20px;
+  color: white;
+    color: #e41e45;
+     text-shadow:
+    1px 1px 2px black,   /* shadow outline */
+    0 0 5px #e41e45,     /* pink glow */
+    0 0 10px #e41e45;
+}
+

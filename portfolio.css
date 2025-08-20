@@ -1,0 +1,425 @@
+/* Roboto font family link  */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+
+/* Philosopher font family link  */
+@import url('https://fonts.googleapis.com/css2?family=Philosopher:wght@400;700&display=swap');
+/* font-family: 'Philosopher', sans-serif; */
+
+*{
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: none;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+.header{
+    width: 100%;
+    height: 125vh;
+    background-image: linear-gradient(rgba(0,0,0,0.877),rgba(0,0,0,0.5)),url("Makeup images/ll6.jpg");
+    background-position: center;
+    background-size: cover;
+    object-fit: cover;
+}
+.logo-text {
+  display: flex;
+  align-items: center;
+  gap: 15px; /* space between logo and text */
+}
+.logo-text img:first-child {
+  width: 180px;
+  height: auto;
+}
+
+.logo-text img:last-child {
+  width: 350px;
+  height: auto;
+  margin-left: 290px;
+}
+
+@font-face {
+  font-family: 'Amperzand';
+  src: url('fonts/Amperzand.ttf') format('truetype'); /* adjust path if needed */
+  font-weight: normal;
+  font-style: normal;
+}
+
+.brand-name {
+  font-family: 'Amperzand', cursive;
+  font-size: 2.8rem;      /* make it big next to logo */
+  color: #ff69b4;         /* hot pink */
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.5); /* glowing */
+  letter-spacing: 2px;    /* elegant spacing */
+}
+
+nav{
+    display: flex;
+    padding: 2% 5%;
+}
+nav ul{
+    text-align: right;
+    flex: 1;
+}
+nav ul li{
+    display: inline-block;
+    padding: 16px 14px;
+}
+nav ul li a{
+    color: #ff69b4;
+    font-weight: bold;
+    font-size: 16px;
+}
+nav ul li a:hover{
+    color: #e41e45;
+}
+nav ul li a::after{
+    content: "";
+    width: 0;
+    height: 2px;
+    display: block;
+    background-color: #e41e45;
+    transition: .5s;
+}
+nav ul li a:hover::after{
+    width: 100%;
+}
+.portfolio{
+    color: #e41e45;
+    font-weight: bold;
+         text-shadow:
+    1px 1px 2px black,   /* shadow outline */
+    0 0 5px purple,     /* pink glow */
+    0 0 10px purple;
+}   
+.portfolio::after{
+    content: "";
+    width: 100%;
+    height: 2px;
+    background-color: #e41e45;
+}
+.button{
+    border: 2px solid purple;
+    padding: 15px 30px;
+    color: white;
+    font-family: 'Philosopher', sans-serif;
+    font-style: italic;
+    letter-spacing: 2px;
+    font-size: 18px;
+    border-radius: 10px;
+    margin-left: 40px;
+}
+.button:hover{
+    background-color: purple;
+    transition: .5s;
+}
+.head{
+    padding-top: 5%;
+    text-align: center;
+}
+.head h1{
+    font-size: 80px;
+    font-weight: 400;
+    font-family: 'Philosopher', sans-serif;
+    color: #ff69b4;
+         text-shadow:
+    1px 1px 2px black,   /* shadow outline */
+    0 0 5px #e41e45,     /* pink glow */
+    0 0 10px #e41e45;
+}
+
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 videos in first row */
+  gap: 20px;  /* spacing between videos */
+  justify-items: center; /* center videos inside cells */
+  padding: 20px;
+}
+
+.gallery video {
+  width: 250px;   /* adjust size */
+  max-width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* Make the 5th video span the center */
+.gallery video:nth-child(5) {
+  grid-column: 2 / span 2; /* place it in the center of 2nd row */
+}
+
+.gallery{
+    margin: 5%;
+    padding-top: 5%;
+}
+.flex img{
+    border-radius: 10px;
+    width: 20%;
+    border: 2px solid purple;
+    padding: 10px;
+    transform: scale(1.2);
+    margin: 40px 28px;
+}
+.flex img:hover{
+    transform: scale(1.0);
+    transition: .8s;
+}
+.gallery {
+  padding: 20px;
+  background-color: #e0b8ce6c; /* light background for contrast */
+}
+
+/* Gallery images */
+.portfolio__img, .before img {
+  width: 300px;  
+  border: 3px solid #ff69b4; 
+  border-radius: 12px; 
+  box-shadow: 0 6px 15px rgba(0,0,0,0.3); 
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+}
+
+.portfolio__img:hover, .before img:hover {
+  transform: scale(1.05); 
+  box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+}
+.before {
+  text-align: center;   /* centers inline elements like img */
+  margin: 20px 0;       /* optional spacing above and below */
+           text-shadow:
+    1px 1px 2px black,   /* shadow outline */
+    0 0 5px #e41e45,     /* pink glow */
+    0 0 10px #e41e45;
+}
+
+.before img {
+  max-width: 300px;     /* adjust image size if too large */
+  height: auto;
+  display: inline-block;
+}
+
+
+/* Modal overlay */
+.modal {
+  display: none; 
+  position: fixed; 
+  z-index: 1000; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgba(0,0,0,0.8);
+  text-align: center; /* centers image horizontally */
+}
+
+/* Modal image - overrides gallery styling */
+.modal-content {
+  display: inline-block;
+  margin: 5% auto; 
+  max-width: 90%;
+  max-height: 90%;
+  width: auto !important; /* ignore gallery width */
+  height: auto !important;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.5);
+  transition: transform 0.3s ease;
+}
+
+.close {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+
+.background{
+    width: 100%;
+    height: 40vh;
+    background-image:linear-gradient(purple,purples), url(GlitterBG-free-img.jpg);
+    background-position: center center;
+    background-size: cover;
+    object-fit: cover;
+    background-repeat: repeat;
+    background-attachment: fixed;
+    padding: 6% 40px;
+    margin-top: 5%;
+    margin-bottom: 10%;
+    background-color: #c42273;
+}
+.sides{
+    display: flex;
+}
+.front-side img{
+    width: 100px;
+    margin-top: 10px;
+}
+.mid-side{
+    padding-left: 40px;
+    padding-top: 20px;
+    color: white;
+}
+.mid-side h1{
+    font-family: 'Philosopher', sans-serif;
+    font-size: 39px;
+}
+.mid-side h2{
+    font-family: 'Philosopher', sans-serif;
+    font-size: 19px;
+    padding-top: 10px;
+}
+.last-side{
+    margin-top: 50px;
+    margin-left: 40px;
+}
+.button3{
+    border: 2px solid white;
+    padding: 18px 38px;
+    color: white;
+    font-family: 'Philosopher', sans-serif;
+    font-style: italic;
+    font-size: 18px;
+    border-radius: 10px;
+}
+.button3:hover{
+    color: purple;
+    background-color: white;
+    transition: .5s;
+             text-shadow:
+    1px 1px 2px black,   /* shadow outline */
+    0 0 5px #e41e45,     /* pink glow */
+    0 0 10px #e41e45;
+}
+.bef{
+    display: flex;
+    margin: 0 80px;
+}
+.bef img{
+    width: 100%;
+    transform: scale(0.8);
+     border: 3px solid #ff69b4; /* pink border */
+}
+.bef h1{
+    font-size: 49px;
+    color: purple;
+    font-family: 'Philosopher', sans-serif;
+    margin-left: 40px;
+    font-weight: 400;
+}
+.icons i{
+    border-radius: 80px;
+    border: 2px solid #e41e45;
+    color: #e41e45;
+    font-size: 22px;
+    padding: 10px 10px;
+    margin-left: 10px;
+     text-shadow:
+    1px 1px 2px black,   /* shadow outline */
+    0 0 5px #e41e45,     /* pink glow */
+    0 0 10px #e41e45;
+}
+.icons i:hover{
+    background-color: #e41e45;
+    color: white;
+}
+/* Footer Section  */
+.footer{
+    background-color: #1a1a1a;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    padding-top: 6%;
+    padding-left: 80px;
+    padding-right: 40px;
+    color: white;
+}
+.footer h1{
+    font-size: 32px;
+    letter-spacing: 2px;
+    color:  #e41e45;
+    font-family: 'Philosopher', sans-serif;
+    padding-bottom: 30px;
+    padding-top: 40px;
+     text-shadow:
+    1px 1px 2px black,   /* shadow outline */
+    0 0 5px purple,     /* pink glow */
+    0 0 10px purple;
+}
+.footer p{
+    font-size: 16px;
+    font-weight: 300;
+    padding-top: 20px;
+    line-height: 1.6;
+    font-family: 'Philosopher', sans-serif;
+}
+.footer h3{
+    padding: 4px 0;
+    font-family: 'Philosopher', sans-serif;
+    font-weight: 300;
+}
+
+.btn{
+    background-color: white;
+    width: 70%;
+    height: 10vh;
+    font-size: 18px;
+    padding-right: 40%;
+    font-family: 'Philosopher', sans-serif;
+    margin-top: 50px;
+    border-radius: 5px;
+}
+.btn1{
+    background-color:  #e41e45;
+    width: 29%;
+    height: 10vh;
+    font-size: 16px;
+    font-family: 'Philosopher', sans-serif;
+    border-radius: 3px;
+    color: white;
+            text-shadow:
+    1px 1px 2px black,   /* shadow outline */
+    0 0 5px  #e41e45,     /* pink glow */
+    0 0 10px  #e41e45;
+}
+.btn1:hover{
+    background-color: #e41e45;
+    transition: .5s;
+}
+.footer-mid-side{
+    margin: 0 60px;
+}
+.footer-mid-side li{
+    padding-bottom: 10px;
+}
+.footer-mid-side li a{
+    color: white;
+}
+.footer-mid-side li a:hover{
+    color:  #e41e45;
+}
+.footer-mid-side .icons i{
+    margin-left: 0;
+    border: 2px solid white;
+    margin-right: 20px;
+}
+.copyright{
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    background-color: #1a1a1a;
+    height: 100px;
+    padding: 22px 0;
+    border-top: 1px solid gainsboro;
+}
+.copyright h1{
+    font-family: 'Philosopher', sans-serif;
+    color: white;
+    font-size: 24px;
+}
