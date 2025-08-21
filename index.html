@@ -1,176 +1,339 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Full-Screen Lookbook Modal</title>
-<style>
-/* Reset */
-body, html {
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
-  height: 100%;
-  background: url('images/background.jpg') no-repeat center center/cover;
-}
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fairy Flirty Lashes</title>
+    <link rel="icon" href="Makeup images/ffl.png" />
+    <link rel="stylesheet" href="home.css" />
+    <link rel="stylesheet" href="testimonial.css" />
+    <link rel="stylesheet" href="responsive.css" />
+ 
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+      integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <br>
+    <!-- In the <head> of each page -->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-/* Modal Overlay */
-.modal-container {
-  display: none; /* hidden initially */
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.85);
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  z-index: 1000;
-}
+  </head>
+    <body>
+  <div class="logo-text">
+    <img src="Makeup images/wl.jpg" alt="logo" class="logo" />
+    <img src="Makeup images/wl1.jpg" alt="logo" class="logo" />
+  </div>
+</body>
+  <body>
+    <section class="header">
+      <nav>
+        <ul>
+          <li><a href="index.html" class="home">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <button  style="background-color: #d325bc; color: rgb(0, 0, 0); border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; font-weight: bold;" onclick="window.open('https://wa.me/26774818666', '_blank')">
+  Chat on WhatsApp
+</button>
 
-/* Main Image */
-.modal img {
-  max-width: 80%;
-  max-height: 70%;
-  border-radius: 10px;
-  margin-bottom: 15px;
-}
+        </ul>
+      </nav>
+      <div class="head">
+        <h1 style = font-weight:bold;>Fairly Flirty lashes</h1>
+         <h3 style=font-weight:bold;>Beauty, Cosmetics & Personal Care</h3>
+                 <p style=margin-top:60px;>
+           Elevate your beauty with Fairly Flirty Lashes<br> where luxury meets confidence. 
+           <br>
+           Explore our premium lash extensions and <br>beauty essentials
+           <br>
+           designed to make every blink unforgettable. 💖
+        </p>
+        <a href="#" class="button">DO YOU BUT LET US DO YOUR LASHES</a>
+        <br>
+        <br>
+        <br>
+        <br>
+        <a href="tel:+26774818666" class="button button2">CLICK HERE TO GIVE US A CALL</a>
+      </div>
+    </section>
 
-/* Close Button */
-.close {
-  position: absolute;
-  top: 20px;
-  right: 30px;
-  font-size: 40px;
-  color: white;
-  cursor: pointer;
-}
-
-/* Navigation Arrows */
-.arrow {
-  position: absolute;
-  top: 50%;
-  font-size: 50px;
-  color: white;
-  cursor: pointer;
-  user-select: none;
-  transform: translateY(-50%);
-}
-.arrow-left {
-  left: 30px;
-}
-.arrow-right {
-  right: 30px;
-}
-
-/* Thumbnails */
-.thumbnails {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-.thumbnails img {
-  width: 60px;
-  height: 60px;
-  object-fit: cover;
-  cursor: pointer;
-  border: 2px solid transparent;
-  border-radius: 6px;
-  transition: border 0.2s, transform 0.2s;
-}
-.thumbnails img:hover, .thumbnails img.active {
-  border: 2px solid #ff69b4;
-  transform: scale(1.05);
-}
-
-/* Open Button for demo */
-.open-btn {
-  padding: 10px 20px;
-  font-size: 18px;
-  cursor: pointer;
-  border: none;
-  border-radius: 8px;
-  background: #ff69b4;
-  color: white;
-  position: absolute;
-  top: 20px;
-  left: 20px;
-}
-</style>
-</head>
-<body>
-
-<!-- Demo button to open modal -->
-<button class="open-btn" onclick="openModal()">View Looks</button>
-
-<!-- Modal -->
-<div class="modal-container" id="lookModal">
-  <span class="close" onclick="closeModal()">&times;</span>
-  <span class="arrow arrow-left" onclick="prevImage()">&#10094;</span>
-  <span class="arrow arrow-right" onclick="nextImage()">&#10095;</span>
-
-  <div class="modal">
-    <img id="mainImage" src="images/look1.jpg" alt="Look">
+    <!-- Studio Section  -->
+   <section class="studio">
+  <div class="studio-oneside">
+    <div class="imgs"><img src="Makeup images/try1.png" alt="Studio Image 1"></div>
+    <div class="imgs"><img src="Makeup images/s1.png" alt="Studio Image 2"></div>
+    <div class="imgs"><img src="Makeup images/a.jpg" alt="Studio Image 3"></div>
+    <div class="imgs"><img src="Makeup images/img.jpg" alt="Studio Image 4"></div>
   </div>
 
-  <div class="thumbnails">
-    <img src="images/look1_thumb.jpg" alt="Look 1" onclick="currentImage(0)">
-    <img src="images/look2_thumb.jpg" alt="Look 2" onclick="currentImage(1)">
-    <img src="images/look3_thumb.jpg" alt="Look 3" onclick="currentImage(2)">
-    <img src="images/look4_thumb.jpg" alt="Look 4" onclick="currentImage(3)">
-    <!-- Add more thumbnails as needed -->
+  <div class="studio-otherside">
+  <h2 class="fancy-title">Welcome To<br />Our Beauty Studio</h2>
+
+    <p style = "color:black; font-weight:bold;">
+      At Fairy Flirty Lashes BW, we believe beauty is more than appearance. It’s about elevation and transformation with every set or beat. With over 3 years of hands-on experience in lash artistry,from clusters to lash extensions, we specialize in enhancing your natural features with elegance and care.
+      <br /><br />
+      From flawless lash extensions to face beats and luxury touch-ups, our studio is your go-to destination for premium service and relaxing vibes. Come andexperience why our clients keep coming back!
+    </p>
+    <a href="#" class="button">Get to know us.</a>
   </div>
+</section>
+
+
+    <!-- Services Section  -->
+ <section class="services">
+  <h2>Lashes For Every Occasion</h2>
+  <div class="services-cards image-cards"> <!-- added image-cards here -->
+    <div class="card">
+      <img src="Makeup images/pagen.jpg" alt="Pagentry Lashing" class="service-img" />
+      <h1>Pagentry Lashing</h1>
+    </div>
+
+    <div class="card">
+      <img src="Makeup images/birthday.jpg" alt="Birthday Lashing" class="service-img" />
+      <h1>Birthday Lashing</h1>
+    </div>
+
+    <div class="card">
+      <img src="Makeup images/bridal.jpg" alt="Bridal Lashing" class="service-img" />
+      <h1>Bridal Lashing</h1>
+    </div>
+
+    <div class="card">
+      <img src="Makeup images/everyday.jpg" alt="Festive Lashing" class="service-img" />
+      <h1>Everyday Lashing</h1>
+    </div>
+  </div>
+</section>
+
+<section class="daily-services">
+  <div class="services-cards text-cards"> <!-- added text-cards here -->
+   <div class="card">
+      <h1>Single Lashes</h1>
+      <span></span>
+      <h3>Classic</h3>
+      <h5>P300.00</h5>
+      <br>
+      <h3>Classic Cateye</h3>
+      <h5>P350.00</h5>
+      <br>
+      <h3>Hybrid</h3>
+      <h5>P350.00</h5>
+      <br>
+      <h3>Wet Set</h3>
+      <h5>P400.00</h5>
+      <br>
+      <h3>Whispy Magic</h3>
+      <h5>P450.00</h5>
+      <br>
+     <h3>Angel Set</h3>
+      <h5>P480.00</h5>
+      <br>
+      <h3>Russian Cateye</h3>
+      <h5>P550.00</h5>
+      <br>
+      <h3>Bottom Lashes</h3>
+      <h5>P700.00</h5>
+      <br>
+      <h3>Removal</h3>
+      <h5>P100.00</h5>
+      <br>
+      <h3>Set done by ust</h3>
+      <h5>P80.00</h5>
+      <br>
+
+    </div>
+    <div class="card">
+      <h1>REFILLS</h1>
+      <span></span>
+      <h3>Classics</h3>
+      <h5>2 weeks P150.00</h5>
+      <h5>3 weeks P200.00</h5>
+      <br>
+     <h3>Hybrids</h3>
+      <h5>2 weeks P160.00</h5>
+      <h5>3 weeks P230.00</h5>
+      <br>
+      <h3>Wet Sets</h3>
+      <h5>2 weeks P160.00</h5>
+      <h5>3 weeks P230.00</h5>
+      <br>
+      <h3>Whisphys</h3>
+      <h5>2 weeks P200.00</h5>
+      <h5>3 weeks P250.00</h5>
+      <br>
+      <h3>Russian</h3>
+      <h5>2 weeks P250.00</h5>
+      <h5>3 weeks P285.00</h5>
+    </div>
+
+    <div class="card">
+      <h1>Make Up</h1>
+      <span></span>
+      <h3>Natural Glam</h3>
+      <h5>P350.00+</h5>
+      <p>Flawless everyday glam for any occasion.</p>
+    <br>
+    <h3>Soft Glam </h3>
+    <h5>P400.00+</h5>
+    <p>Perfect for a fast refresh or touch-up on the go.</p>
+    <br>
+    <h3>Just Eyes</h3>
+    <h5>P95.00+</h5>
+    <p>Includes eyeshadow, liner, and lashes for a bold look.</p>
+    <br>
+    <h3>Full Glam</h3>
+    <h5>P465.00+</h5>
+    <p>Test your pagentry look before the big day.</p>
+      <!-- rest omitted -->
+    </div>
+
+<div class="card">
+  <h1>Synthetic Wig Services</h1>
+  <span></span>
+
+  <h3>Installation + Commission</h3>
+  <h5>P200.00+</h5>
+  <p>Professional wig installation for a natural, seamless look that lasts all day.</p>
+  <br>
+
+  <h3>Labour (Adding Bundles Only)</h3>
+  <h5>P180.00+</h5>
+  <p>Quick service to add extra bundles into your wig for volume or length.</p>
+  <br>
+
+  <h3>Buy Bundles For You</h3>
+  <h5>P280.00+</h5>
+  <p>We’ll source and provide quality bundles tailored to your preferred style.</p>
+  <br>
+
+  <h3>Full Glam Wig Styling</h3>
+  <h5>P465.00+</h5>
+  <p>Complete customization with cutting, styling, and finishing for a polished glam look.</p>
 </div>
 
-<script>
-// Image Array
-const images = [
-  'images/look1.jpg',
-  'images/look2.jpg',
-  'images/look3.jpg',
-  'images/look4.jpg'
-];
-let currentIndex = 0;
 
-// Open/Close Modal
-function openModal() {
-  document.getElementById('lookModal').style.display = 'flex';
-  showImage(currentIndex);
-}
-function closeModal() {
-  document.getElementById('lookModal').style.display = 'none';
-}
+    
 
-// Show Image by index
-function showImage(index) {
-  const mainImage = document.getElementById('mainImage');
-  mainImage.src = images[index];
-  currentIndex = index;
+  </div>
+</section>
 
-  // Update thumbnail highlight
-  const thumbs = document.querySelectorAll('.thumbnails img');
-  thumbs.forEach((thumb, i) => {
-    thumb.classList.toggle('active', i === index);
-  });
-}
 
-// Next / Previous
-function nextImage() {
-  currentIndex = (currentIndex + 1) % images.length;
-  showImage(currentIndex);
-}
-function prevImage() {
-  currentIndex = (currentIndex - 1 + images.length) % images.length;
-  showImage(currentIndex);
-}
+    <section class="testimonial">
+      <h1>Join the family by clicking the icons and follow our pages at:</h1>
+<!-- Instagram -->
+<a href="https://www.instagram.com/reel/DIpbS0Qo4oN/?utm_source=ig_web_copy_link" target="_blank">
+  <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" 
+       alt="Instagram" 
+       style="width:40px;height:40px; margin-right:30px;">
+</a>
 
-// Thumbnail click
-function currentImage(index) {
-  showImage(index);
-}
-</script>
+<a href="https://wa.me/26774818666" target="_blank">
+  <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" 
+       alt="WhatsApp" 
+       style="width:40px;height:40px; margin-right:30px;">
+</a>
 
-</body>
+<a href="https://web.facebook.com/people/FairyFlirty-Lashes-BW/100083957592551/?_rdc=1&_rdr" target="_blank">
+  <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" 
+       alt="Facebook" 
+       style="width:40px;height:40px; margin-right:30px;">
+</a>
+
+<a href="https://www.tiktok.com/@fairyflirtylashes_bw?is_from_webapp=1&sender_device=pc" target="_blank">
+  <img src="https://cdn-icons-png.flaticon.com/512/3046/3046126.png" 
+       alt="TikTok" 
+       style="width:40px;height:40px;">
+</a>
+
+<br />
+      <img src="Makeup images/aq.png" alt="testimonial" />
+
+      <p style = "color:black; font-weight:bold;">
+        Get to hear from our previous clients as your beauty is our priority.<br>
+        Please on the arrows to read from our client feedbacks.</p>    
+    </section>
+
+<div class="testimonial-slider">
+  <div class="slides-container">
+    <div class="slide">
+      <h3 style = "color:black; font-weight:bold;">Victoria</h3>
+      <p>"I can confirm that your lashes are lightweight, very friendly to the eyes and long lasting."❤️✨</p>
+    </div>
+    
+    <div class="slide">
+      <h3 style = "color:black; font-weight:bold;">Dr. Thanolo Keutlwile</h3>
+      <p>"Proud of you always, I love your work. O nkgakolle ke go supporte."</p>
+    </div>
+  </div>
+
+  <button class="prev">&#10094;</button>
+  <button class="next">&#10095;</button>
+</div>
+ <script src="Instagram_files/testimonial.js"></script>
+
+
+
+
+
+     <!-- Footer Section  -->
+    <section class="footer">
+      <div class="footer-left-side">
+        <h1>Bangu Pearl Montsho</h1>
+        <p>
+             <img src="Makeup images/try1 - Copy.png" alt="logo" />
+        </p>
+      </div>
+
+      <div class="footer-mid-side">
+        <h1>Quick Links</h1>
+        <ul>
+          <li><a href="index.html" class="index">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <h1>Click on each icon to follow our pages.</h1>
+        <div class="icons">
+
+<!-- Instagram -->
+<a href="https://www.instagram.com/reel/DIpbS0Qo4oN/?utm_source=ig_web_copy_link" target="_blank">
+  <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" 
+       alt="Instagram" 
+       style="width:40px;height:40px; margin-right:30px;">
+</a>
+
+<a href="https://wa.me/26774818666" target="_blank">
+  <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" 
+       alt="WhatsApp" 
+       style="width:40px;height:40px; margin-right:30px;">
+</a>
+
+<a href="https://web.facebook.com/people/FairyFlirty-Lashes-BW/100083957592551/?_rdc=1&_rdr" target="_blank">
+  <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" 
+       alt="Facebook" 
+       style="width:40px;height:40px; margin-right:30px;">
+</a>
+
+<a href="https://www.tiktok.com/@fairyflirtylashes_bw?is_from_webapp=1&sender_device=pc" target="_blank">
+  <img src="https://cdn-icons-png.flaticon.com/512/3046/3046126.png" 
+       alt="TikTok" 
+       style="width:40px;height:40px;">
+</a>
+
+
+        </div>
+      </div>
+
+      <div class="footer-right-side">
+        <h1>Get in touch</h1>
+        <h3>fairyflashl@gmail.com</h3>
+        <h3>Phone/Whatsapp: (+267) 74 818 666</h3>
+      </div>
+    </section>
+  </body>
 </html>
