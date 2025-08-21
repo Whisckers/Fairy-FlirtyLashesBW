@@ -396,7 +396,7 @@ nav ul li a:hover::after{
     padding: 10px;
   }
   .artist img {
-    width: 100%;
+    width: 50%;
   }
   .artist h4 {
     font-size: 14px;
