@@ -1,99 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Bootstrap Lookbook Modal</title>
-<!-- Bootstrap CSS -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-<style>
-body {
-  background: url('images/background.jpg') no-repeat center center/cover;
-  min-height: 100vh;
-}
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fairy Flirty Lashes</title>
+    <link rel="icon" href="Makeup images/ffl.png" />
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
 
-/* Thumbnail styling */
-.thumb-img {
-  width: 60px;
-  height: 60px;
-  object-fit: cover;
-  cursor: pointer;
-  border: 2px solid transparent;
-  border-radius: 6px;
-  transition: border 0.2s, transform 0.2s;
-}
-.thumb-img:hover, .thumb-img.active {
-  border: 2px solid #ff69b4;
-  transform: scale(1.05);
-}
-</style>
-</head>
-<body>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="home.css" />
+    <link rel="stylesheet" href="testimonial.css" />
+    <link rel="stylesheet" href="responsive.css" />
+  </head>
 
-<!-- Button to trigger modal -->
-<button type="button" class="btn btn-pink m-3" data-bs-toggle="modal" data-bs-target="#lookModal">
-  View Looks
-</button>
-
-<!-- Bootstrap Modal -->
-<div class="modal fade" id="lookModal" tabindex="-1" aria-labelledby="lookModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-fullscreen">
-    <div class="modal-content bg-dark text-center">
-      <div class="modal-header border-0">
-        <h5 class="modal-title text-white" id="lookModalLabel">Lookbook</h5>
-        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+  <body>
+    <!-- Header Section -->
+    <header class="container-fluid p-3 bg-light">
+      <div class="d-flex justify-content-between align-items-center mb-3">
+        <div class="d-flex align-items-center">
+          <img src="Makeup images/wl.jpg" alt="logo" class="me-2" style="height:50px;">
+          <img src="Makeup images/wl1.jpg" alt="logo" style="height:50px;">
+        </div>
+        <nav>
+          <ul class="nav">
+            <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+            <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+            <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
+            <li class="nav-item"><a href="portfolio.html" class="nav-link">Portfolio</a></li>
+            <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+            <li class="nav-item">
+              <button class="btn btn-danger ms-2" onclick="window.open('https://wa.me/26774818666', '_blank')">
+                Chat on WhatsApp
+              </button>
+            </li>
+          </ul>
+        </nav>
       </div>
-      <div class="modal-body">
-        <!-- Bootstrap Carousel -->
-        <div id="lookCarousel" class="carousel slide" data-bs-ride="carousel">
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <img src="images/look1.jpg" class="d-block w-75 mx-auto rounded" alt="Look 1">
-            </div>
-            <div class="carousel-item">
-              <img src="images/look2.jpg" class="d-block w-75 mx-auto rounded" alt="Look 2">
-            </div>
-            <div class="carousel-item">
-              <img src="images/look3.jpg" class="d-block w-75 mx-auto rounded" alt="Look 3">
-            </div>
-            <div class="carousel-item">
-              <img src="images/look4.jpg" class="d-block w-75 mx-auto rounded" alt="Look 4">
+
+      <div class="text-center my-5">
+        <h1 class="fw-bold">Fairy Flirty Lashes</h1>
+        <h3 class="fw-bold">Beauty, Cosmetics & Personal Care</h3>
+        <p class="mt-4">
+          Elevate your beauty with Fairy Flirty Lashes<br>
+          where luxury meets confidence.<br>
+          Explore our premium lash extensions and beauty essentials<br>
+          designed to make every blink unforgettable. 💖
+        </p>
+        <a href="#" class="btn btn-primary mb-3">Do you but let us do your lashes</a><br>
+        <a href="tel:+26774818666" class="btn btn-outline-primary">Click here to give us a call</a>
+      </div>
+    </header>
+
+    <!-- Studio Section -->
+    <section class="studio container my-5">
+      <div class="row">
+        <div class="col-md-6 mb-3">
+          <div class="row g-2">
+            <div class="col-6"><img src="Makeup images/try1.png" class="img-fluid rounded" alt="Studio Image 1"></div>
+            <div class="col-6"><img src="Makeup images/s1.png" class="img-fluid rounded" alt="Studio Image 2"></div>
+            <div class="col-6"><img src="Makeup images/a.jpg" class="img-fluid rounded" alt="Studio Image 3"></div>
+            <div class="col-6"><img src="Makeup images/img.jpg" class="img-fluid rounded" alt="Studio Image 4"></div>
+          </div>
+        </div>
+        <div class="col-md-6 d-flex flex-column justify-content-center">
+          <h2 class="fw-bold mb-3">Welcome To<br>Our Beauty Studio</h2>
+          <p class="mb-3">
+            At Fairy Flirty Lashes BW, we believe beauty is more than appearance...
+            <br><br>
+            From flawless lash extensions to face beats and luxury touch-ups...
+          </p>
+          <a href="#" class="btn btn-primary">Get to know us</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services container my-5">
+      <h2 class="text-center mb-4">Lashes For Every Occasion</h2>
+      <div class="row g-3">
+        <div class="col-md-3">
+          <div class="card">
+            <img src="Makeup images/pagen.jpg" class="card-img-top" alt="Pagentry Lashing">
+            <div class="card-body text-center">
+              <h5 class="card-title">Pagentry Lashing</h5>
             </div>
           </div>
-          <button class="carousel-control-prev" type="button" data-bs-target="#lookCarousel" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon"></span>
-          </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#lookCarousel" data-bs-slide="next">
-            <span class="carousel-control-next-icon"></span>
-          </button>
         </div>
-
-        <!-- Thumbnails -->
-        <div class="d-flex justify-content-center mt-3 flex-wrap gap-2">
-          <img src="images/look1_thumb.jpg" class="thumb-img active" onclick="goToSlide(0)" alt="Thumb 1">
-          <img src="images/look2_thumb.jpg" class="thumb-img" onclick="goToSlide(1)" alt="Thumb 2">
-          <img src="images/look3_thumb.jpg" class="thumb-img" onclick="goToSlide(2)" alt="Thumb 3">
-          <img src="images/look4_thumb.jpg" class="thumb-img" onclick="goToSlide(3)" alt="Thumb 4">
+        <div class="col-md-3">
+          <div class="card">
+            <img src="Makeup images/birthday.jpg" class="card-img-top" alt="Birthday Lashing">
+            <div class="card-body text-center">
+              <h5 class="card-title">Birthday Lashing</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card">
+            <img src="Makeup images/bridal.jpg" class="card-img-top" alt="Bridal Lashing">
+            <div class="card-body text-center">
+              <h5 class="card-title">Bridal Lashing</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card">
+            <img src="Makeup images/everyday.jpg" class="card-img-top" alt="Everyday Lashing">
+            <div class="card-body text-center">
+              <h5 class="card-title">Everyday Lashing</h5>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
-</div>
+    </section>
 
-<!-- Bootstrap JS Bundle -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-<script>
-// Access carousel instance
-const carouselEl = document.getElementById('lookCarousel');
-const carousel = new bootstrap.Carousel(carouselEl);
-
-// Thumbnail click function
-function goToSlide(index) {
-  carousel.to(index);
-  const thumbs = document.querySelectorAll('.thumb-img');
-  thumbs.forEach((thumb, i) => thumb.classList.toggle('active', i === index));
-}
-</script>
-
-</body>
+    <!-- Bootstrap JS (optional) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
 </html>
