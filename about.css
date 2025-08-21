@@ -331,6 +331,100 @@ nav ul li a:hover::after{
   font-weight: bold;
   cursor: pointer;
 }
+/* Responsive Styles - Keep horizontal layout on mobile */
+@media (max-width: 768px) {
+
+  /* Logo Row */
+  .logo-text {
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
+  }
+  .logo-text img:first-child {
+    width: 100px;
+  }
+  .logo-text img:last-child {
+    width: 160px;
+    margin-left: 0;
+  }
+
+  /* Navigation stays inline but smaller */
+  nav ul li {
+    padding: 8px;
+  }
+  nav ul li a {
+    font-size: 14px;
+  }
+  nav button {
+    padding: 6px 12px;
+    font-size: 14px;
+  }
+
+  /* About Section - keep image + text side by side */
+  .flex {
+    flex-direction: row;
+    flex-wrap: nowrap; /* prevent stacking */
+  }
+  .left-side img {
+    width: 150px;
+    transform: scale(1);
+  }
+  .right-side {
+    margin: 0 10px;
+  }
+  .right-side h1 {
+    font-size: 20px;
+  }
+  .right-side h2 {
+    font-size: 16px;
+  }
+  .right-side p {
+    font-size: 14px;
+    line-height: 1.4;
+  }
+
+  /* Team Section - shrink but stay in row */
+  .team-flex {
+    flex-direction: row;
+    flex-wrap: wrap; /* allows multiple rows if screen too small */
+    justify-content: center;
+  }
+  .artist {
+    width: 140px;
+    height: auto;
+    margin: 10px;
+    padding: 10px;
+  }
+  .artist img {
+    width: 100%;
+  }
+  .artist h4 {
+    font-size: 14px;
+  }
+
+  /* Footer - still horizontal but compressed */
+  .footer {
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 20px;
+    height: auto;
+    text-align: center;
+  }
+  .footer-left-side,
+  .footer-mid-side,
+  .footer-right-side {
+    flex: 1;
+    margin: 10px;
+  }
+  .footer h1 {
+    font-size: 20px;
+  }
+  .footer h3,
+  .footer p {
+    font-size: 14px;
+  }
+}
+
 
 
 
