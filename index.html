@@ -1,124 +1,195 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Fairy Flirty Lashes</title>
-    <link rel="icon" href="Makeup images/ffl.png" />
-    
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fairy Flirty Lashes</title>
+  <link rel="icon" href="Makeup images/ffl.png">
+  <link rel="stylesheet" href="home.css">
+  <link rel="stylesheet" href="testimonial.css">
+  <link rel="stylesheet" href="responsive.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
 
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="home.css" />
-    <link rel="stylesheet" href="testimonial.css" />
-    <link rel="stylesheet" href="responsive.css" />
-  </head>
+  <!-- Logo Section -->
+  <div class="logo-text">
+    <img src="Makeup images/wl.jpg" alt="logo" class="logo">
+    <img src="Makeup images/wl1.jpg" alt="logo" class="logo">
+  </div>
 
-  <body>
-    <!-- Header Section -->
-    <header class="container-fluid p-3 bg-light">
-      <div class="d-flex justify-content-between align-items-center mb-3">
-        <div class="d-flex align-items-center">
-          <img src="Makeup images/wl.jpg" alt="logo" class="me-2" style="height:50px;">
-          <img src="Makeup images/wl1.jpg" alt="logo" style="height:50px;">
-        </div>
-        <nav>
-          <ul class="nav">
-            <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
-            <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
-            <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
-            <li class="nav-item"><a href="portfolio.html" class="nav-link">Portfolio</a></li>
-            <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
-            <li class="nav-item">
-              <button class="btn btn-danger ms-2" onclick="window.open('https://wa.me/26774818666', '_blank')">
-                Chat on WhatsApp
-              </button>
-            </li>
-          </ul>
-        </nav>
+  <!-- Header Section -->
+  <header class="header">
+    <nav>
+      <ul>
+        <li><a href="index.html" class="home">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li>
+          <button class="whatsapp-btn" onclick="window.open('https://wa.me/26774818666', '_blank')">
+            Chat on WhatsApp
+          </button>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="head">
+      <h1>Fairly Flirty Lashes</h1>
+      <h3>Beauty, Cosmetics & Personal Care</h3>
+      <p>
+        Elevate your beauty with Fairly Flirty Lashes where luxury meets confidence.<br>
+        Explore our premium lash extensions and beauty essentials designed to make every blink unforgettable. 💖
+      </p>
+      <a href="#" class="button">Let Us Do Your Lashes</a>
+      <a href="tel:+26774818666" class="button button2">Give Us a Call</a>
+    </div>
+  </header>
+
+  <!-- Studio Section -->
+  <section class="studio">
+    <div class="studio-oneside">
+      <div class="imgs"><img src="Makeup images/try1.png" alt="Studio Image 1"></div>
+      <div class="imgs"><img src="Makeup images/s1.png" alt="Studio Image 2"></div>
+      <div class="imgs"><img src="Makeup images/a.jpg" alt="Studio Image 3"></div>
+      <div class="imgs"><img src="Makeup images/img.jpg" alt="Studio Image 4"></div>
+    </div>
+
+    <div class="studio-otherside">
+      <h2 class="fancy-title">Welcome To Our Beauty Studio</h2>
+      <p>
+        At Fairy Flirty Lashes BW, we believe beauty is more than appearance. It’s about elevation and transformation with every set or beat. With over 3 years of hands-on experience in lash artistry, we specialize in enhancing your natural features with elegance and care.
+        <br><br>
+        From flawless lash extensions to face beats and luxury touch-ups, our studio is your go-to destination for premium service and relaxing vibes. Come and experience why our clients keep coming back!
+      </p>
+      <a href="#" class="button">Get to Know Us</a>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section class="services">
+    <h2>Lashes For Every Occasion</h2>
+    <div class="services-cards image-cards">
+      <div class="card">
+        <img src="Makeup images/pagen.jpg" alt="Pagentry Lashing" class="service-img">
+        <h1>Pagentry Lashing</h1>
+      </div>
+      <div class="card">
+        <img src="Makeup images/birthday.jpg" alt="Birthday Lashing" class="service-img">
+        <h1>Birthday Lashing</h1>
+      </div>
+      <div class="card">
+        <img src="Makeup images/bridal.jpg" alt="Bridal Lashing" class="service-img">
+        <h1>Bridal Lashing</h1>
+      </div>
+      <div class="card">
+        <img src="Makeup images/everyday.jpg" alt="Everyday Lashing" class="service-img">
+        <h1>Everyday Lashing</h1>
+      </div>
+    </div>
+  </section>
+
+  <!-- Daily Services Section -->
+  <section class="daily-services">
+    <div class="services-cards text-cards">
+      <!-- Single Lashes Card -->
+      <div class="card">
+        <h1>Single Lashes</h1>
+        <h3>Classic</h3><h5>P300.00</h5>
+        <h3>Classic Cateye</h3><h5>P350.00</h5>
+        <h3>Hybrid</h3><h5>P350.00</h5>
+        <h3>Wet Set</h3><h5>P400.00</h5>
+        <h3>Whispy Magic</h3><h5>P450.00</h5>
+        <h3>Angel Set</h3><h5>P480.00</h5>
+        <h3>Russian Cateye</h3><h5>P550.00</h5>
+        <h3>Bottom Lashes</h3><h5>P700.00</h5>
+        <h3>Removal</h3><h5>P100.00</h5>
+        <h3>Set Done By Us</h3><h5>P80.00</h5>
       </div>
 
-      <div class="text-center my-5">
-        <h1 class="fw-bold">Fairy Flirty Lashes</h1>
-        <h3 class="fw-bold">Beauty, Cosmetics & Personal Care</h3>
-        <p class="mt-4">
-          Elevate your beauty with Fairy Flirty Lashes<br>
-          where luxury meets confidence.<br>
-          Explore our premium lash extensions and beauty essentials<br>
-          designed to make every blink unforgettable. 💖
-        </p>
-        <a href="#" class="btn btn-primary mb-3">Do you but let us do your lashes</a><br>
-        <a href="tel:+26774818666" class="btn btn-outline-primary">Click here to give us a call</a>
+      <!-- Refills Card -->
+      <div class="card">
+        <h1>Refills</h1>
+        <h3>Classics</h3><h5>2 weeks P150.00 / 3 weeks P200.00</h5>
+        <h3>Hybrids</h3><h5>2 weeks P160.00 / 3 weeks P230.00</h5>
+        <h3>Wet Sets</h3><h5>2 weeks P160.00 / 3 weeks P230.00</h5>
+        <h3>Whisphys</h3><h5>2 weeks P200.00 / 3 weeks P250.00</h5>
+        <h3>Russian</h3><h5>2 weeks P250.00 / 3 weeks P285.00</h5>
       </div>
-    </header>
 
-    <!-- Studio Section -->
-    <section class="studio container my-5">
-      <div class="row">
-        <div class="col-md-6 mb-3">
-          <div class="row g-2">
-            <div class="col-6"><img src="Makeup images/try1.png" class="img-fluid rounded" alt="Studio Image 1"></div>
-            <div class="col-6"><img src="Makeup images/s1.png" class="img-fluid rounded" alt="Studio Image 2"></div>
-            <div class="col-6"><img src="Makeup images/a.jpg" class="img-fluid rounded" alt="Studio Image 3"></div>
-            <div class="col-6"><img src="Makeup images/img.jpg" class="img-fluid rounded" alt="Studio Image 4"></div>
-          </div>
-        </div>
-        <div class="col-md-6 d-flex flex-column justify-content-center">
-          <h2 class="fw-bold mb-3">Welcome To<br>Our Beauty Studio</h2>
-          <p class="mb-3">
-            At Fairy Flirty Lashes BW, we believe beauty is more than appearance...
-            <br><br>
-            From flawless lash extensions to face beats and luxury touch-ups...
-          </p>
-          <a href="#" class="btn btn-primary">Get to know us</a>
-        </div>
+      <!-- Makeup Card -->
+      <div class="card">
+        <h1>Make Up</h1>
+        <h3>Natural Glam</h3><h5>P350.00+</h5><p>Flawless everyday glam for any occasion.</p>
+        <h3>Soft Glam</h3><h5>P400.00+</h5><p>Perfect for a fast refresh or touch-up on the go.</p>
+        <h3>Just Eyes</h3><h5>P95.00+</h5><p>Includes eyeshadow, liner, and lashes for a bold look.</p>
+        <h3>Full Glam</h3><h5>P465.00+</h5><p>Test your pagentry look before the big day.</p>
       </div>
-    </section>
 
-    <!-- Services Section -->
-    <section class="services container my-5">
-      <h2 class="text-center mb-4">Lashes For Every Occasion</h2>
-      <div class="row g-3">
-        <div class="col-md-3">
-          <div class="card">
-            <img src="Makeup images/pagen.jpg" class="card-img-top" alt="Pagentry Lashing">
-            <div class="card-body text-center">
-              <h5 class="card-title">Pagentry Lashing</h5>
-            </div>
-          </div>
+      <!-- Wig Services Card -->
+      <div class="card">
+        <h1>Synthetic Wig Services</h1>
+        <h3>Installation + Commission</h3><h5>P200.00+</h5><p>Professional wig installation for a natural, seamless look.</p>
+        <h3>Labour (Adding Bundles Only)</h3><h5>P180.00+</h5><p>Quick service to add extra bundles for volume or length.</p>
+        <h3>Buy Bundles For You</h3><h5>P280.00+</h5><p>We’ll source and provide quality bundles tailored to your style.</p>
+        <h3>Full Glam Wig Styling</h3><h5>P465.00+</h5><p>Complete customization with cutting, styling, and finishing for a polished glam look.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Social / Testimonial Section -->
+  <section class="testimonial">
+    <h1>Join the family by clicking the icons and follow our pages:</h1>
+    <div class="social-icons">
+          <a href="https://www.instagram.com/reel/DIpbS0Qo4" target="_blank"><i class="fa fa-instagram"></i></a>
+      <a href="https://www.facebook.com/fairyflirtylashes" target="_blank"><i class="fa fa-facebook"></i></a>
+      <a href="https://wa.me/26774818666" target="_blank"><i class="fa fa-whatsapp"></i></a>
+    </div>
+
+    <div class="testimonials">
+      <h2>What Our Clients Say</h2>
+      <div class="testimonial-cards">
+        <div class="testimonial-card">
+          <p>"Absolutely love my lashes! The team is professional and makes you feel pampered. Highly recommend!"</p>
+          <h4>- Sarah M.</h4>
         </div>
-        <div class="col-md-3">
-          <div class="card">
-            <img src="Makeup images/birthday.jpg" class="card-img-top" alt="Birthday Lashing">
-            <div class="card-body text-center">
-              <h5 class="card-title">Birthday Lashing</h5>
-            </div>
-          </div>
+        <div class="testimonial-card">
+          <p>"The wig styling service is amazing! I feel confident and glamorous every time I visit."</p>
+          <h4>- Thato K.</h4>
         </div>
-        <div class="col-md-3">
-          <div class="card">
-            <img src="Makeup images/bridal.jpg" class="card-img-top" alt="Bridal Lashing">
-            <div class="card-body text-center">
-              <h5 class="card-title">Bridal Lashing</h5>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="card">
-            <img src="Makeup images/everyday.jpg" class="card-img-top" alt="Everyday Lashing">
-            <div class="card-body text-center">
-              <h5 class="card-title">Everyday Lashing</h5>
-            </div>
-          </div>
+        <div class="testimonial-card">
+          <p>"Best lash extensions in Botswana. Friendly staff and a clean, welcoming studio."</p>
+          <h4>- Neo P.</h4>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Bootstrap JS (optional) -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  </body>
+  <!-- Footer Section -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-logo">
+        <img src="Makeup images/ffl.png" alt="Fairy Flirty Lashes Logo">
+      </div>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="footer-contact">
+        <p>📞 +267 748 18666</p>
+        <p>✉️ info@fairyflirtylashes.com</p>
+        <p>📍 Gaborone, Botswana</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Fairy Flirty Lashes. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+</body>
 </html>
+
