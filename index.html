@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Lookbook Modal with Thumbnails</title>
+<title>Full-Screen Lookbook Modal</title>
 <style>
 /* Reset */
 body, html {
@@ -11,51 +11,65 @@ body, html {
   padding: 0;
   font-family: sans-serif;
   height: 100%;
+  background: url('images/background.jpg') no-repeat center center/cover;
 }
 
-/* Background */
-.background {
-  background: url('images/background.jpg') no-repeat center center/cover;
-  height: 100vh;
-  display: flex;
+/* Modal Overlay */
+.modal-container {
+  display: none; /* hidden initially */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.85);
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+  z-index: 1000;
 }
 
-/* Modal Container */
-.modal-container {
-  background: rgba(255, 255, 255, 0.95);
-  padding: 20px;
-  border-radius: 12px;
-  text-align: center;
-  position: relative;
-  max-width: 90%;
-}
-
-/* Main Modal Image */
+/* Main Image */
 .modal img {
-  width: 400px;
-  max-width: 100%;
-  border-radius: 8px;
+  max-width: 80%;
+  max-height: 70%;
+  border-radius: 10px;
+  margin-bottom: 15px;
 }
 
 /* Close Button */
 .close {
   position: absolute;
-  top: 10px;
-  right: 20px;
-  font-size: 28px;
-  font-weight: bold;
+  top: 20px;
+  right: 30px;
+  font-size: 40px;
+  color: white;
   cursor: pointer;
+}
+
+/* Navigation Arrows */
+.arrow {
+  position: absolute;
+  top: 50%;
+  font-size: 50px;
+  color: white;
+  cursor: pointer;
+  user-select: none;
+  transform: translateY(-50%);
+}
+.arrow-left {
+  left: 30px;
+}
+.arrow-right {
+  right: 30px;
 }
 
 /* Thumbnails */
 .thumbnails {
-  margin-top: 15px;
   display: flex;
   justify-content: center;
-  gap: 10px;
   flex-wrap: wrap;
+  gap: 10px;
 }
 .thumbnails img {
   width: 60px;
@@ -66,42 +80,95 @@ body, html {
   border-radius: 6px;
   transition: border 0.2s, transform 0.2s;
 }
-.thumbnails img:hover {
+.thumbnails img:hover, .thumbnails img.active {
   border: 2px solid #ff69b4;
   transform: scale(1.05);
+}
+
+/* Open Button for demo */
+.open-btn {
+  padding: 10px 20px;
+  font-size: 18px;
+  cursor: pointer;
+  border: none;
+  border-radius: 8px;
+  background: #ff69b4;
+  color: white;
+  position: absolute;
+  top: 20px;
+  left: 20px;
 }
 </style>
 </head>
 <body>
 
-<div class="background">
-  <div class="modal-container">
-    <!-- Close Button -->
-    <span class="close" onclick="closeModal()">&times;</span>
+<!-- Demo button to open modal -->
+<button class="open-btn" onclick="openModal()">View Looks</button>
 
-    <!-- Main Image -->
-    <div class="modal">
-      <img id="mainImage" src="images/look1.jpg" alt="Look 1">
-    </div>
+<!-- Modal -->
+<div class="modal-container" id="lookModal">
+  <span class="close" onclick="closeModal()">&times;</span>
+  <span class="arrow arrow-left" onclick="prevImage()">&#10094;</span>
+  <span class="arrow arrow-right" onclick="nextImage()">&#10095;</span>
 
-    <!-- Thumbnails -->
-    <div class="thumbnails">
-      <img src="images/look1_thumb.jpg" alt="Look 1" onclick="showImage('images/look1.jpg')">
-      <img src="images/look2_thumb.jpg" alt="Look 2" onclick="showImage('images/look2.jpg')">
-      <img src="images/look3_thumb.jpg" alt="Look 3" onclick="showImage('images/look3.jpg')">
-      <img src="images/look4_thumb.jpg" alt="Look 4" onclick="showImage('images/look4.jpg')">
-      <!-- Add more thumbnails as needed -->
-    </div>
+  <div class="modal">
+    <img id="mainImage" src="images/look1.jpg" alt="Look">
+  </div>
+
+  <div class="thumbnails">
+    <img src="images/look1_thumb.jpg" alt="Look 1" onclick="currentImage(0)">
+    <img src="images/look2_thumb.jpg" alt="Look 2" onclick="currentImage(1)">
+    <img src="images/look3_thumb.jpg" alt="Look 3" onclick="currentImage(2)">
+    <img src="images/look4_thumb.jpg" alt="Look 4" onclick="currentImage(3)">
+    <!-- Add more thumbnails as needed -->
   </div>
 </div>
 
 <script>
-function showImage(src) {
-  document.getElementById('mainImage').src = src;
+// Image Array
+const images = [
+  'images/look1.jpg',
+  'images/look2.jpg',
+  'images/look3.jpg',
+  'images/look4.jpg'
+];
+let currentIndex = 0;
+
+// Open/Close Modal
+function openModal() {
+  document.getElementById('lookModal').style.display = 'flex';
+  showImage(currentIndex);
+}
+function closeModal() {
+  document.getElementById('lookModal').style.display = 'none';
 }
 
-function closeModal() {
-  document.querySelector('.modal-container').style.display = 'none';
+// Show Image by index
+function showImage(index) {
+  const mainImage = document.getElementById('mainImage');
+  mainImage.src = images[index];
+  currentIndex = index;
+
+  // Update thumbnail highlight
+  const thumbs = document.querySelectorAll('.thumbnails img');
+  thumbs.forEach((thumb, i) => {
+    thumb.classList.toggle('active', i === index);
+  });
+}
+
+// Next / Previous
+function nextImage() {
+  currentIndex = (currentIndex + 1) % images.length;
+  showImage(currentIndex);
+}
+function prevImage() {
+  currentIndex = (currentIndex - 1 + images.length) % images.length;
+  showImage(currentIndex);
+}
+
+// Thumbnail click
+function currentImage(index) {
+  showImage(index);
 }
 </script>
 
