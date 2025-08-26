@@ -1,206 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio - Makeup Artist</title>
-    <link rel="icon" href="Makeup images/favicon.png" />
-    <link rel="icon" href="Makeup images/ffl.png" />
-    <link rel="stylesheet" href="portfolio.css" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
-      crossorigin="anonymous"
-    />
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio</title>
+  <link rel="icon" href="Makeup images/favicon.png" />
+  <link rel="icon" href="Makeup images/ffl.png" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Philosopher:wght@400;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Roboto', sans-serif; }
+    h1, h2, h3, h4, h5 { font-family: 'Philosopher', sans-serif; }
+    .text-pink { color: #ff69b4 !important; text-shadow: 1px 1px 2px black, 0 0 5px #e41e45, 0 0 10px #e41e45; font-weight: bolder;}
+    .btn-pink { background-color: #d325bc; color: #000; font-weight: bold; }
+    .btn-pink:hover { background-color: #b01c9b; color: #fff; }
+    header h1 { text-shadow: 1px 1px 2px black, 0 0 5px #e41e45, 0 0 10px #e41e45; }
+    .portfolio__img { width: 100%; height: 400px; object-fit: cover; border-radius: 10px; cursor: pointer; }
+    footer h1 { text-shadow: 1px 1px 2px black, 0 0 5px purple, 0 0 10px purple; }
+  </style>
+</head>
+<body>
 
-  <body>
-    <!-- Logo Row -->
-    <div class="text-center my-3">
-      <img src="Makeup images/wl.jpg" alt="logo" class="logo mx-2" />
-      <img src="Makeup images/wl1.jpg" alt="logo" class="logo mx-2" />
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark py-3">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center" href="#">
+      <img src="Makeup images/wl-removebg-preview.png" alt="Logo" class="logo me-3" style="width:200px;">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navmenu">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+        <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+        <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
+        <li class="nav-item"><a href="portfolio.html" class="nav-link active text-pink">Portfolio</a></li>
+        <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+      <a href="https://wa.me/26774818666" target="_blank" class="btn btn-pink ms-lg-3">Chat on WhatsApp</a>
     </div>
+  </div>
+</nav>
 
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
-      <div class="container">
-        <a class="navbar-brand fw-bold" href="index.html">Fairy Flirty Lashes</a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-            <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-            <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
-            <li class="nav-item"><a class="nav-link active" href="portfolio.html">Portfolio</a></li>
-            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-            <li class="nav-item">
-              <a
-                class="btn btn-sm fw-bold ms-2"
-                style="background-color:#d325bc; color:black;"
-                href="https://wa.me/26774818666"
-                target="_blank"
-              >
-                Chat on WhatsApp
-              </a>
-            </li>
-          </ul>
-        </div>
+<!-- Header -->
+<header class="text-center text-white d-flex align-items-center justify-content-center" 
+        style="padding-top: 100px; height:100vh; background:linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.3)), url('Makeup images/ll6.jpg') center/cover;">
+  <h1 class="display-3 fw-bold text-pink">Portfolio</h1>
+</header>
+
+<!-- Video Gallery -->
+<section class="container my-5">
+  <div class="row g-4">
+    <div class="col-md-4"><video class="portfolio__img" autoplay muted loop><source src="Makeup images/v9_resized.mp4" type="video/mp4"></video></div>
+    <div class="col-md-4"><video class="portfolio__img" autoplay muted loop><source src="Makeup images/v7_resized.mp4" type="video/mp4"></video></div>
+    <div class="col-md-4"><video class="portfolio__img" autoplay muted loop><source src="Makeup images/v6_resized.mp4" type="video/mp4"></video></div>
+    <div class="col-md-6"><video class="portfolio__img" autoplay muted loop><source src="Makeup images/v8_resized.mp4" type="video/mp4"></video></div>
+    <div class="col-md-6"><video class="portfolio__img" autoplay muted loop><source src="Makeup images/ban8)_resized.mp4" type="video/mp4"></video></div>
+  </div>
+</section>
+
+<!-- Before & After Section -->
+<section class="container my-5 text-center">
+  <h1 class="text-pink mb-4">Before & After</h1>
+  <div class="row g-4">
+    <div class="col-md-6">
+      <img src="Makeup images/a1.png" class="img-fluid rounded shadow-sm" alt="Before" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showModal(this.src)">
+      <h5 class="mt-2">Before</h5>
+    </div>
+    <div class="col-md-6">
+      <img src="Makeup images/a2.png" class="img-fluid rounded shadow-sm" alt="After" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showModal(this.src)">
+      <h5 class="mt-2">After</h5>
+    </div>
+    <div class="col-md-6">
+      <img src="Makeup images/i2.png" class="img-fluid rounded shadow-sm" alt="Before" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showModal(this.src)">
+      <h5 class="mt-2">Before</h5>
+    </div>
+    <div class="col-md-6">
+      <img src="Makeup images/i3.png" class="img-fluid rounded shadow-sm" alt="After" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showModal(this.src)">
+      <h5 class="mt-2">After</h5>
+    </div>
+  </div>
+</section>
+
+<!-- Image Modal -->
+<div class="modal fade" id="imageModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content bg-transparent border-0">
+      <img id="modalImage" class="img-fluid rounded shadow">
+    </div>
+  </div>
+</div>
+
+<script>
+  function showModal(src) {
+    document.getElementById("modalImage").src = src;
+  }
+</script>
+
+<!-- Footer -->
+<footer class="bg-dark text-white py-5">
+  <div class="container text-center">
+    <h1>Bangu Pearl Montsho</h1>
+    <p><img src="Makeup images/try1 - Copy.png" alt="logo" style="width:100px;"></p>
+    <div class="row">
+      <div class="col-md-4">
+        <h5>Quick Links</h5>
+        <ul class="list-unstyled">
+          <li><a href="index.html" class="text-white">Home</a></li>
+          <li><a href="about.html" class="text-white">About</a></li>
+          <li><a href="services.html" class="text-white">Services</a></li>
+          <li><a href="portfolio.html" class="text-white">Portfolio</a></li>
+          <li><a href="contact.html" class="text-white">Contact</a></li>
+        </ul>
       </div>
-    </nav>
-
-    <!-- Header -->
-    <header class="text-center py-5 bg-light">
-      <h1 class="fw-bold">Portfolio</h1>
-    </header>
-
-    <!-- Video Gallery -->
-    <section class="container my-5">
-      <div class="row g-3">
-        <div class="col-md-4 col-sm-6">
-          <video class="w-100 rounded" autoplay muted loop playsinline>
-            <source src="Makeup images/v9_resized.mp4" type="video/mp4" />
-          </video>
-        </div>
-        <div class="col-md-4 col-sm-6">
-          <video class="w-100 rounded" autoplay muted loop playsinline>
-            <source src="Makeup images/v7_resized.mp4" type="video/mp4" />
-          </video>
-        </div>
-        <div class="col-md-4 col-sm-6">
-          <video class="w-100 rounded" autoplay muted loop playsinline>
-            <source src="Makeup images/v6_resized.mp4" type="video/mp4" />
-          </video>
-        </div>
-        <div class="col-md-6 col-sm-6">
-          <video class="w-100 rounded" autoplay muted loop playsinline>
-            <source src="Makeup images/v8_resized.mp4" type="video/mp4" />
-          </video>
-        </div>
-        <div class="col-md-6 col-sm-6">
-          <video class="w-100 rounded" autoplay muted loop playsinline>
-            <source src="Makeup images/ban8)_resized.mp4" type="video/mp4" />
-          </video>
-        </div>
+      <div class="col-md-4">
+        <h5>Follow Us</h5>
+        <a href="https://www.instagram.com/" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" width="40"></a>
+        <a href="https://wa.me/26774818666" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" width="40"></a>
+        <a href="https://facebook.com" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" width="40"></a>
+        <a href="https://tiktok.com" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/3046/3046126.png" width="40"></a>
       </div>
-    </section>
-
-    <h2 class="text-center my-4 text-danger fw-bold">
-      Click on the image for a close up.
-    </h2>
-
-    <!-- Image Gallery with Modal -->
-    <section class="container my-5">
-      <div class="row g-3">
-        <div class="col-md-3 col-6">
-          <img
-            src="Makeup images/ls2.jpg"
-            class="img-fluid rounded gallery-img"
-            data-bs-toggle="modal"
-            data-bs-target="#imageModal"
-          />
-        </div>
-        <div class="col-md-3 col-6">
-          <img
-            src="Makeup images/a1.png"
-            class="img-fluid rounded gallery-img"
-            data-bs-toggle="modal"
-            data-bs-target="#imageModal"
-          />
-        </div>
-        <div class="col-md-3 col-6">
-          <img
-            src="Makeup images/a2.png"
-            class="img-fluid rounded gallery-img"
-            data-bs-toggle="modal"
-            data-bs-target="#imageModal"
-          />
-        </div>
-        <div class="col-md-3 col-6">
-          <img
-            src="Makeup images/i2.png"
-            class="img-fluid rounded gallery-img"
-            data-bs-toggle="modal"
-            data-bs-target="#imageModal"
-          />
-        </div>
-      </div>
-    </section>
-
-    <!-- Bootstrap Modal -->
-    <div
-      class="modal fade"
-      id="imageModal"
-      tabindex="-1"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog modal-dialog-centered modal-lg">
-        <div class="modal-content bg-dark">
-          <div class="modal-body p-0">
-            <img id="modalImage" class="w-100 rounded" />
-          </div>
-        </div>
+      <div class="col-md-4">
+        <h5>Get in Touch</h5>
+        <p>Email: fairyflashl@gmail.com</p>
+        <p>Phone: (+267) 74 818 666</p>
       </div>
     </div>
+  </div>
+</footer>
 
-    <!-- Footer -->
-    <footer class="bg-dark text-light py-5 mt-5">
-      <div class="container row">
-        <div class="col-md-4">
-          <h5>Bangu Pearl Montsho</h5>
-          <img src="Makeup images/try1 - Copy.png" alt="logo" class="img-fluid" />
-        </div>
-        <div class="col-md-4">
-          <h5>Quick Links</h5>
-          <ul class="list-unstyled">
-            <li><a href="index.html" class="text-light">Home</a></li>
-            <li><a href="about.html" class="text-light">About</a></li>
-            <li><a href="services.html" class="text-light">Services</a></li>
-            <li><a href="portfolio.html" class="text-light">Portfolio</a></li>
-            <li><a href="contact.html" class="text-light">Contact</a></li>
-          </ul>
-          <div class="d-flex gap-3 mt-3">
-            <a href="https://www.instagram.com/reel/DIpbS0Qo4oN/" target="_blank">
-              <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" style="width:30px;">
-            </a>
-            <a href="https://wa.me/26774818666" target="_blank">
-              <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" style="width:30px;">
-            </a>
-            <a href="https://web.facebook.com/people/FairyFlirty-Lashes-BW" target="_blank">
-              <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" style="width:30px;">
-            </a>
-            <a href="https://www.tiktok.com/@fairyflirtylashes_bw" target="_blank">
-              <img src="https://cdn-icons-png.flaticon.com/512/3046/3046126.png" style="width:30px;">
-            </a>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <h5>Get in touch</h5>
-          <p>Email: fairyflashl@gmail.com</p>
-          <p>Phone/WhatsApp: (+267) 74 818 666</p>
-        </div>
-      </div>
-    </footer>
-
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-      // Update modal image when clicked
-      document.querySelectorAll(".gallery-img").forEach((img) => {
-        img.addEventListener("click", function () {
-          document.getElementById("modalImage").src = this.src;
-        });
-      });
-    </script>
-  </body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
 </html>
