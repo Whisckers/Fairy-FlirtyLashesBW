@@ -14,7 +14,7 @@
     }
     
     body { 
-      font-family: 'Roboto', sans-serif; 
+      font-family: 'Philosopher', sans-serif; 
       margin:0; 
       padding:0; 
     }
@@ -61,15 +61,15 @@
     .head h3 { 
       font-size: 27px; 
       font-weight: 300; 
-      text-shadow: 1px 1px 2px black, 0 0 5px #ffffff, 0 0 10px #ffffff; 
+      text-shadow: 1px 1px 2px black, 0 0 5px #e41e45, 0 0 10px #e41e45; 
     }
     
     .head p { 
       font-size: 20px; 
       font-weight: bold; 
       line-height: 1.4; 
-      color: var(--pink); 
-      text-shadow: 1px 1px 2px black, 0 0 5px #ffffff, 0 0 10px #ffffff; 
+      color: white; 
+      text-shadow: 1px 1px 2px black, 0 0 5px #e41e45, 0 0 10px #e41e45;  
       margin-bottom: 5%; 
       padding-top: 20px; 
     }
@@ -191,6 +191,7 @@
       border-radius: 10px;
       margin-bottom: 10px;
       background: #f0f0f0;
+      border: 4px solid #e41e45; /* thickness + color */
     }
 
     .services .card:hover {
@@ -201,6 +202,7 @@
     .daily-services {
       padding: 50px 0;
       background-color: #f8f9fa;
+      border: 4px solid #e41e45; /* thickness + color */
     }
 
     .daily-services .card {
@@ -214,6 +216,7 @@
       height: 100%;
       display: flex;
       flex-direction: column;
+      border: 4px solid #e41e45; /* thickness + color */
     }
 
     .daily-services .card h1 {
@@ -445,6 +448,15 @@
         padding: 30px 20px;
       }
     }
+
+    /* Default nav links */
+.navbar .nav-link {
+  color:#ff69b4 !important;   /* pink */
+  font-weight: bolder;
+  transition: color 0.2s ease;
+  text-shadow: 1px 1px 2px black, 0 0 5px #e41e45, 0 0 10px #e41e45;
+}
+
   </style>
 </head>
 <body>
@@ -480,13 +492,11 @@
       <p style="margin-top:60px;">
         Elevate your beauty with Fairly Flirty Lashes<br>
         where luxury meets confidence. 
-        <br>
-        Explore our premium lash extensions and <br>beauty essentials
-        <br>
+        Explore our <br>premium lash extensions and beauty essentials<br>
         designed to make every blink unforgettable. 💖
       </p>
       <a href="#" class="button">DO YOU BUT LET US DO YOUR LASHES</a>
-      <br><br><br><br>
+      <br><br>
       <a href="tel:+26774818666" class="button button2">CLICK HERE TO GIVE US A CALL</a>
     </div>
   </div>
