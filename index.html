@@ -3,174 +3,449 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About - Makeup Artist</title>
-  <link rel="icon" href="Makeup images/ffl.png" />
+  <title>Fairly Flirty Lashes - Beauty Studio</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Philosopher:wght@400;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
   <style>
-    body { font-family: 'Roboto', sans-serif; margin:0; padding:0; }
-    h1,h2,h3,h4,h5 { font-family: 'Philosopher', sans-serif; }
-    .text-pink { color: #ff69b4 !important; text-shadow: 1px 1px 2px black, 0 0 5px #e41e45, 0 0 10px #e41e45; font-weight: bolder; }
-    .btn-pink { background-color: #d325bc; color: #000; font-weight: bold; }
-    .btn-pink:hover { background-color: #b01c9b; color: #fff; }
-    header h1, .card-title, footer h1 { text-shadow: 1px 1px 2px black, 0 0 5px #e41e45, 0 0 10px #e41e45; }
+    :root {
+      --pink: #e41e45;
+      --dark-pink: #b01c9b;
+      --light-bg: #e0b8ce6c;
+    }
+    
+    body { 
+      font-family: 'Roboto', sans-serif; 
+      margin:0; 
+      padding:0; 
+    }
+    
+    h1,h2,h3,h4,h5 { 
+      font-family: 'Philosopher', sans-serif; 
+    }
+    
+    .text-pink { 
+      color: #ff69b4 !important; 
+      text-shadow: 1px 1px 2px black, 0 0 5px var(--pink), 0 0 10px var(--pink); 
+      font-weight: bolder; 
+    }
+    
+    .btn-pink { 
+      background-color: var(--dark-pink); 
+      color: #000; 
+      font-weight: bold; 
+    }
+    
+    .btn-pink:hover { 
+      background-color: var(--dark-pink); 
+      color: #fff; 
+      opacity: 0.9;
+    }
+    
+    header h1, .card-title, footer h1 { 
+      text-shadow: 1px 1px 2px black, 0 0 5px var(--pink), 0 0 10px var(--pink); 
+    }
 
-    .head { color:white; margin-top:15%; margin-left:6%; padding-bottom:10%; }
-    .head h1{ font-size:40px; font-weight:500; text-shadow:1px 1px 2px black,0 0 5px #e41e45,0 0 10px #e41e45; }
-    .head h3{ font-size:27px; font-weight:300; text-shadow:1px 1px 2px black,0 0 5px #ffffff,0 0 10px #ffffff; }
-    .head p{ font-size:20px; font-weight:bold; line-height:1.4; color:#e41e45; text-shadow:1px 1px 2px black,0 0 5px #ffffff,0 0 10px #ffffff; margin-bottom:5%; padding-top:20px; }
-    .head .button{ margin-right:25px; text-decoration:none; padding:15px 25px; border-radius:10px; border:none; background-color:#e41e45; color:white; font-weight:bold; display:inline-block; }
-    .button2{ border:2px solid white; color:white; padding:15px 25px; text-decoration:none; border-radius:10px; display:inline-block; }
-    .button2:hover{ background-color:white; color:#e41e45; transition:.5s; }
+    .head { 
+      color: white; 
+      margin-top: 15%; 
+      margin-left: 6%; 
+      padding-bottom: 10%; 
+    }
+    
+    .head h1 { 
+      font-size: 40px; 
+      font-weight: 500; 
+      text-shadow: 1px 1px 2px black, 0 0 5px var(--pink), 0 0 10px var(--pink); 
+    }
+    
+    .head h3 { 
+      font-size: 27px; 
+      font-weight: 300; 
+      text-shadow: 1px 1px 2px black, 0 0 5px #ffffff, 0 0 10px #ffffff; 
+    }
+    
+    .head p { 
+      font-size: 20px; 
+      font-weight: bold; 
+      line-height: 1.4; 
+      color: var(--pink); 
+      text-shadow: 1px 1px 2px black, 0 0 5px #ffffff, 0 0 10px #ffffff; 
+      margin-bottom: 5%; 
+      padding-top: 20px; 
+    }
+    
+    .head .button { 
+      margin-right: 25px; 
+      text-decoration: none; 
+      padding: 15px 25px; 
+      border-radius: 10px; 
+      border: none; 
+      background-color: var(--pink); 
+      color: white; 
+      font-weight: bold; 
+      display: inline-block; 
+    }
+    
+    .button2 { 
+      border: 2px solid white; 
+      color: white; 
+      padding: 15px 25px; 
+      text-decoration: none; 
+      border-radius: 10px; 
+      display: inline-block; 
+    }
+    
+    .button2:hover { 
+      background-color: white; 
+      color: var(--pink); 
+      transition: .5s; 
+    }
 
     /* Studio */
-.studio {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 40px;
-    padding: 50px 40px;
-    align-items: flex-start; /* align top */
-}
+    .studio {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+      padding: 50px 40px;
+      align-items: flex-start;
+    }
 
-.studio-images {
-    flex: 1;
-    display: grid;
-    grid-template-columns: 1fr 1fr; /* 2 columns */
-    grid-template-rows: auto auto; /* 2 rows */
-    gap: 15px; /* space between images */
-}
+    .studio-images {
+      flex: 1;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto auto;
+      gap: 15px;
+    }
 
-.studio-images img {
-    width: 100%;
-    height: 400px; /* smaller height for proper fit */
-    object-fit: cover;
-    border-radius: 10px;
-    border: 3px solid #e41e45;
-    transition: transform 0.9s ease;
-}
+    .studio-images img {
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+      border-radius: 10px;
+      border: 3px solid var(--pink);
+      transition: transform 0.9s ease;
+    }
 
-.studio-images img:hover {
-    transform: scale(1.5); /* smaller hover effect */
-}
+    .studio-images img:hover {
+      transform: scale(1.05);
+    }
 
+    .studio-text {
+      flex: 1;
+      margin-top: 0;
+    }
 
-.studio-text {
-    flex: 1; /* takes 50% or adjust */
-    margin-top: 190px;
-}
+    .studio-text h2 {
+      color: var(--pink);
+      text-shadow: 1px 1px 2px black, 0 0 5px var(--pink), 0 0 10px var(--pink);
+      padding-top: 160px;
+    }
 
-.studio-text h2 {
-    color: #e41e45;
-    text-shadow: 1px 1px 2px black,0 0 5px #e41e45,0 0 10px #e41e45;
-}
+    .studio-text p {
+      color: black;
+      font-weight: bold;
+      text-align: justify;
+      line-height: 1.6;
+    }
 
-.studio-text p {
-    color: black;
-    font-weight: bold;
-    text-align: justify;
-    line-height: 1.6;
-}
-
-.studio-text .button {
-    text-decoration: none;
-    padding: 10px 25px;
-    background: #e41e45;
-    color: white;
-    border-radius: 10px;
-    display: inline-block;
-    margin-top: 15px;
-}
+    .studio-text .button {
+      text-decoration: none;
+      padding: 10px 25px;
+      background: var(--pink);
+      color: white;
+      border-radius: 10px;
+      display: inline-block;
+      margin-top: 15px;
+    }
 
     /* Services */
-.services {
-    background-color:#e0b8ce6c;
-    padding:30px 30px 60px;
-    text-align:center;
-}
+    .services {
+      background-color: var(--light-bg);
+      padding: 30px 30px 60px;
+      text-align: center;
+    }
 
-.services h2 {
-    font-size:50px;
-    color:#e41e45;
-    margin-bottom:40px;
-    text-shadow:1px 1px 2px black,0 0 5px #e41e45,0 0 10px #e41e45;
-}
+    .services h2 {
+      font-size: 50px;
+      color: var(--pink);
+      margin-bottom: 40px;
+      text-shadow: 1px 1px 2px black, 0 0 5px var(--pink), 0 0 10px var(--pink);
+    }
 
-.services-cards {
-    display: flex;
-    justify-content: center;  /* center row */
-    align-items: stretch;     /* equal height cards */
-    gap: 20px;
-    flex-wrap: nowrap;        /* force single row */
-}
+    .services .card {
+      background: white;
+      border: 2px solid purple;
+      border-radius: 30px;
+      padding: 25px;
+      text-align: center;
+      height: 100%;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: 0.3s;
+    }
 
-.card {
-    background: white;
-    border: 2px solid purple;
-    border-radius: 30px;
-    padding: 25px;
-    text-align: center;
-    flex: 1;                 /* evenly distribute */
-    max-width: 22%;          /* 4 per row */
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    transition: .1s;
-}
+    .services .card img {
+      width: 100%;
+      height: 240px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 10px;
+      background: #f0f0f0;
+    }
 
-.card img {
-    width: 100%;
-    height: 240px;
-    object-fit: cover;       /* crop neatly instead of contain */
-    border-radius: 10px;
-    margin-bottom: 10px;
-    background: #f0f0f0;
-}
+    .services .card:hover {
+      transform: scale(1.05);
+    }
 
-.card:hover {
-    transform: scale(1.05);
-}
+    /* Daily Services - FIXED */
+    .daily-services {
+      padding: 50px 0;
+      background-color: #f8f9fa;
+    }
 
-    /* Daily Services */
-    .daily-services .card{ min-height:600px; padding:25px; margin-bottom:4px; margin-top:40px;}
-    .daily-services .card:hover{ background-color:black; color:white; transition:.1s; }
-    .daily-services .card h1{ font-size:30px; margin-bottom:15px; }
-    .daily-services .card h3{ font-size:22px; margin-bottom:5px; }
-    .daily-services .card h5{ font-size:18px; color:#e41e45; margin-bottom:10px; }
+    .daily-services .card {
+      background-color: #fff;
+      border-radius: 20px;
+      border: 2px solid var(--pink);
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .daily-services .card h1 {
+      font-size: 22px;
+      margin-bottom: 15px;
+      color: var(--pink);
+    }
+
+    .daily-services .card h3 {
+      font-size: 16px;
+      margin-bottom: 8px;
+      color: #333;
+    }
+
+    .daily-services .card p {
+      font-size: 14px;
+      margin-bottom: 10px;
+      color: #666;
+    }
+
+    .daily-services .card:hover {
+      transform: scale(1.02);
+      background-color: var(--pink);
+      color: white;
+    }
+
+    .daily-services .card:hover h1,
+    .daily-services .card:hover h3,
+    .daily-services .card:hover p {
+      color: white;
+    }
 
     /* Testimonial */
-    .testimonial{ text-align:center; margin-top:10%; }
-    .testimonial h1{ color:#e41e45; margin-bottom:20px; font-size:26px; text-shadow:1px 1px 2px black,0 0 5px #e41e45,0 0 10px #e41e45; }
-    .testimonial img{ margin-top:5%; border-radius:50%; border:3px solid #e41e45; width:350px; height:auto; }
-    .testimonial p{ color:black; font-weight:bold; margin-top:20px; margin-bottom:30px; font-family:'Philosopher', sans-serif; }
-    .testimonial-slider{ position:relative; max-width:800px; margin:40px auto; overflow:hidden; }
-    .testimonial-slider .slides-container{ display:flex; transition:all .5s ease; }
-    .testimonial-slider .slide{ min-width:100%; padding:20px; box-sizing:border-box; }
-    .testimonial-slider button{ position:absolute; top:50%; transform:translateY(-50%); background:#e41e45; border:none; color:white; font-size:30px; padding:10px; cursor:pointer; }
-    .testimonial-slider .prev{ left:10px; }
-    .testimonial-slider .next{ right:10px; }
+    .testimonial { 
+      text-align: center; 
+      padding: 40px 0;
+    }
+    
+    .testimonial h1 { 
+      color: var(--pink); 
+      margin-bottom: 20px; 
+      font-size: 26px; 
+      text-shadow: 1px 1px 2px black, 0 0 5px var(--pink), 0 0 10px var(--pink); 
+    }
+    
+    .testimonial img { 
+      margin-top: 5%; 
+      border-radius: 50%; 
+      border: 3px solid var(--pink); 
+      width: 350px; 
+      height: auto; 
+    }
+    
+    .testimonial p { 
+      color: black; 
+      font-weight: bold; 
+      margin-top: 20px; 
+      margin-bottom: 30px; 
+      font-family: 'Philosopher', sans-serif; 
+    }
+    
+    .testimonial-slider { 
+      position: relative; 
+      max-width: 800px; 
+      margin: 40px auto; 
+      overflow: hidden; 
+    }
+    
+    .testimonial-slider .slides-container { 
+      display: flex; 
+      transition: all .5s ease; 
+    }
+    
+    .testimonial-slider .slide { 
+      min-width: 100%; 
+      padding: 20px; 
+      box-sizing: border-box; 
+    }
+    
+    .testimonial-slider button { 
+      position: absolute; 
+      top: 50%; 
+      transform: translateY(-50%); 
+      background: var(--pink); 
+      border: none; 
+      color: white; 
+      font-size: 30px; 
+      padding: 10px; 
+      cursor: pointer; 
+    }
+    
+    .testimonial-slider .prev { 
+      left: 10px; 
+    }
+    
+    .testimonial-slider .next { 
+      right: 10px; 
+    }
 
     /* Footer */
-    footer{ background:#111; color:white; padding:50px 0; }
-    footer h1{ color:#ff69b4; margin-bottom:20px; }
-    footer a{ color:white; text-decoration:none; }
-    footer a:hover{ text-decoration:underline; }
+    footer { 
+      background: #111; 
+      color: white; 
+      padding: 50px 0; 
+    }
+    
+    footer h1 { 
+      color: #ff69b4; 
+      margin-bottom: 20px; 
+    }
+    
+    footer a { 
+      color: white; 
+      text-decoration: none; 
+    }
+    
+    footer a:hover { 
+      text-decoration: underline; 
+    }
 
     /* Navbar logo glow */
-    .logo{ width:220px; transition:transform .3s ease; position:relative; z-index:2; }
-    .logo:hover{ transform:scale(1.0.5); }
-    .logo-glow{ position:absolute; width:160px; height:160px; background:transparent; border:3px solid rgba(255,20,147,0.6); border-radius:50%; filter:blur(4px); top:50%; left:50px; transform:translate(-50%,-50%); z-index:1; }
+    .logo { 
+      width: 220px; 
+      transition: transform .3s ease; 
+      position: relative; 
+      z-index: 2; 
+    }
+    
+    .logo:hover { 
+      transform: scale(1.05); 
+    }
+    
+    .logo-glow { 
+      position: absolute; 
+      width: 160px; 
+      height: 160px; 
+      background: transparent; 
+      border: 3px solid rgba(255,20,147,0.6); 
+      border-radius: 50%; 
+      filter: blur(4px); 
+      top: 50%; 
+      left: 50px; 
+      transform: translate(-50%, -50%); 
+      z-index: 1; 
+    }
 
-.background {
-    width: 100%;
-    height: 130vh; /* Full screen height */
-    background-image: url('Makeup images/cover3a.jpeg');
-    background-position: center center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    padding: 6% 40px;
-    display: flex;
-    align-items: center; /* vertically center content */
-}
+    .background {
+      width: 100%;
+      height: 100vh;
+      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.7)), url('Makeup images/cover3a.jpeg') center/cover no-repeat;
+      padding: 6% 40px;
+      display: flex;
+      align-items: center;
+    }
 
-</style>
+    /* Responsive adjustments */
+    @media (max-width: 1200px) {
+      .head h1 {
+        font-size: 36px;
+      }
+      
+      .head h3 {
+        font-size: 24px;
+      }
+    }
+
+    @media (max-width: 992px) {
+      .studio {
+        flex-direction: column;
+      }
+      
+      .studio-text {
+        margin-top: 30px;
+      }
+      
+      .head {
+        margin-top: 25%;
+        text-align: center;
+        margin-left: 0;
+      }
+      
+      .background {
+        height: 80vh;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .head h1 {
+        font-size: 32px;
+      }
+      
+      .head h3 {
+        font-size: 22px;
+      }
+      
+      .head p {
+        font-size: 18px;
+      }
+      
+      .services h2 {
+        font-size: 36px;
+      }
+      
+      .studio-images {
+        grid-template-columns: 1fr;
+      }
+      
+      .testimonial img {
+        width: 250px;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .head .button, .button2 {
+        display: block;
+        margin: 10px auto;
+        width: 80%;
+      }
+      
+      .background {
+        padding: 20% 20px;
+      }
+      
+      .services {
+        padding: 30px 15px;
+      }
+      
+      .studio {
+        padding: 30px 20px;
+      }
+    }
+  </style>
 </head>
 <body>
 
@@ -179,7 +454,7 @@
     <div class="container">
       <a class="navbar-brand d-flex align-items-center position-relative" href="#">
         <span class="logo-glow"></span>
-        <img src="Makeup images/wl-removebg-preview.png" alt="Logo" class="logo me-3">
+        <img src="Makeup images/wl-removebg-preview.png" alt="Logo" class="logo me-3" style="width:200px;">
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
         <span class="navbar-toggler-icon"></span>
@@ -198,143 +473,146 @@
   </nav>
 
   <!-- Header Section -->
-<div class="background">
-  <div class="head">
-    
-    <h1 style="font-weight:bold;">Fairly Flirty Lashes</h1>
-    <h3 style="font-weight:bold;">Beauty, Cosmetics & Personal Care</h3>
-    <p style="margin-top:60px;">
-      Elevate your beauty with Fairly Flirty Lashes<br>
-      where luxury meets confidence. 
-      <br>
-      Explore our premium lash extensions and <br>beauty essentials
-      <br>
-      designed to make every blink unforgettable. 💖
-    </p>
-    <a href="#" class="button">DO YOU BUT LET US DO YOUR LASHES</a>
-    <br><br><br><br>
-    <a href="tel:+26774818666" class="button button2">CLICK HERE TO GIVE US A CALL</a>
+  <div class="background">
+    <div class="head">
+      <h1 style="font-weight:bold;">Fairly Flirty Lashes</h1>
+      <h3 style="font-weight:bold;">Beauty, Cosmetics & Personal Care</h3>
+      <p style="margin-top:60px;">
+        Elevate your beauty with Fairly Flirty Lashes<br>
+        where luxury meets confidence. 
+        <br>
+        Explore our premium lash extensions and <br>beauty essentials
+        <br>
+        designed to make every blink unforgettable. 💖
+      </p>
+      <a href="#" class="button">DO YOU BUT LET US DO YOUR LASHES</a>
+      <br><br><br><br>
+      <a href="tel:+26774818666" class="button button2">CLICK HERE TO GIVE US A CALL</a>
+    </div>
   </div>
-</div>
-
 
   <!-- Studio Section -->
-<section class="studio">
-  <div class="studio-images">
+  <section class="studio">
+    <div class="studio-images">
     <img src="Makeup images/try1.png" alt="Studio Image 1">
     <img src="Makeup images/s1.png" alt="Studio Image 2">
     <img src="Makeup images/a.jpg" alt="Studio Image 3">
     <img src="Makeup images/img.jpg" alt="Studio Image 4">
-  </div>
-  <div class="studio-text">
-    <h2>Welcome To Our Beauty Studio</h2>
-    <p>
-      At Fairy Flirty Lashes BW, we believe beauty is more than appearance. It’s about elevation and transformation with every set or beat. With over 3 years of hands-on experience in lash artistry, we specialize in enhancing your natural features with elegance and care.
-      <br><br>
-      From flawless lash extensions to face beats and luxury touch-ups, our studio is your go-to destination for premium service and relaxing vibes. Come and experience why our clients keep coming back!
-    </p>
-    <a href="#" class="button">Get to know us.</a>
-  </div>
-</section>
-
+    </div>
+    <div class="studio-text">
+      <h2>Welcome To Our Beauty Studio</h2>
+      <p>
+        At Fairy Flirty Lashes BW, we believe beauty is more than appearance. It's about elevation and transformation with every set or beat. With over 3 years of hands-on experience in lash artistry, we specialize in enhancing your natural features with elegance and care.
+        <br><br>
+        From flawless lash extensions to face beats and luxury touch-ups, our studio is your go-to destination for premium service and relaxing vibes. Come and experience why our clients keep coming back!
+      </p>
+      <a href="#" class="button">Get to know us.</a>
+    </div>
+  </section>
 
   <!-- Services Section -->
-  <!-- Services Section -->
-<section class="services py-5">
-  <div class="container">
-    <h2 class="mb-4">Lashes For Every Occasion</h2>
-    <div class="row g-4">
-      <div class="col-12 col-sm-6 col-md-3">
-        <div class="card h-100 text-center">
-          <img src="Makeup images/pagen.jpg" class="card-img-top img-fluid" alt="Pagentry Lashing">
-          <h1 class="mt-2">Pagentry Lashing</h1>
+  <section class="services py-5">
+    <div class="container">
+      <h2 class="mb-4">Lashes For Every Occasion</h2>
+      <div class="row g-4">
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+          <div class="card h-100 text-center">
+            <img src="Makeup images/pagen.jpg" class="card-img-top img-fluid" alt="Pagentry Lashing">
+            <h1 class="mt-2">Pagentry Lashing</h1>
+          </div>
         </div>
-      </div>
-      <div class="col-12 col-sm-6 col-md-3">
-        <div class="card h-100 text-center">
-          <img src="Makeup images/birthday.jpg" class="card-img-top img-fluid" alt="Birthday Lashing">
-          <h1 class="mt-2">Birthday Lashing</h1>
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+          <div class="card h-100 text-center">
+            <img src="Makeup images/birthday.jpg" class="card-img-top img-fluid" alt="Birthday Lashing">
+            <h1 class="mt-2">Birthday Lashing</h1>
+          </div>
         </div>
-      </div>
-      <div class="col-12 col-sm-6 col-md-3">
-        <div class="card h-100 text-center">
-          <img src="Makeup images/bridal.jpg" class="card-img-top img-fluid" alt="Bridal Lashing">
-          <h1 class="mt-2">Bridal Lashing</h1>
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+          <div class="card h-100 text-center">
+             <img src="Makeup images/bridal.jpg" class="card-img-top img-fluid" alt="Bridal Lashing">
+            <h1 class="mt-2">Bridal Lashing</h1>
+          </div>
         </div>
-      </div>
-      <div class="col-12 col-sm-6 col-md-3">
-        <div class="card h-100 text-center">
-          <img src="Makeup images/everyday.jpg" class="card-img-top img-fluid" alt="Everyday Lashing">
-          <h1 class="mt-2">Everyday Lashing</h1>
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+          <div class="card h-100 text-center">
+            <img src="Makeup images/everyday.jpg" class="card-img-top img-fluid" alt="Everyday Lashing">
+            <h1 class="mt-2">Everyday Lashing</h1>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- Daily Services Section -->
-<section class="daily-services py-5 bg-light">
-  <div class="container">
-    <div class="row g-4">
-      <div class="col-12 col-sm-6 col-md-3">
-        <div class="card h-100 p-3">
-          <h1>Single Lashes</h1>
-          <h3>Classic - P300</h3>
-          <h3>Classic Cateye - P350</h3>
-          <h3>Hybrid - P350</h3>
-          <h3>Wet Set - P400</h3>
-          <h3>Whispy Magic - P450</h3>
-          <h3>Angel Set - P480</h3>
-          <h3>Russian Cateye - P550</h3>
-          <h3>Bottom Lashes - P700</h3>
-          <h3>Removal - P100</h3>
-          <h3>Set done by us - P80</h3>
+  <!-- Daily Services Section - FIXED -->
+  <section class="daily-services py-5">
+    <div class="container">
+      <h2 class="text-center mb-5" style="color: #e41e45; text-shadow: 1px 1px 2px black,0 0 5px #e41e45,0 0 10px #e41e45;">Our Services & Pricing</h2>
+      <div class="row g-4">
+        <!-- Single Lashes -->
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="card">
+            <h1>Single Lashes</h1>
+            <h3>Classic - P300</h3>
+            <h3>Classic Cateye - P350</h3>
+            <h3>Hybrid - P350</h3>
+            <h3>Wet Set - P400</h3>
+            <h3>Whispy Magic - P450</h3>
+            <h3>Angel Set - P480</h3>
+            <h3>Russian Cateye - P550</h3>
+            <h3>Bottom Lashes - P700</h3>
+            <h3>Removal - P100</h3>
+            <h3>Set done by us - P80</h3>
+          </div>
         </div>
-      </div>
-      <div class="col-12 col-sm-6 col-md-3">
-        <div class="card h-100 p-3">
-          <h1>REFILLS</h1>
-          <h3>Classics: 2w P150 / 3w P200</h3>
-          <h3>Hybrids: 2w P160 / 3w P230</h3>
-          <h3>Wet Sets: 2w P160 / 3w P230</h3>
-          <h3>Whisphys: 2w P200 / 3w P250</h3>
-          <h3>Russian: 2w P250 / 3w P285</h3>
+        
+        <!-- Refills -->
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="card">
+            <h1>REFILLS</h1>
+            <h3>Classics: 2 weeks P150 <br>3 weeks P200</h3><br> 
+            <h3>Hybrids: 2 weeks P160 <br> 3 weeks P230</h3><br> 
+            <h3>Wet Sets: 2 weeks P160 <br> 3 weeks P230</h3><br> 
+            <h3>Whisphys: 2 weeks P200 <br>/ 3 weeks P250</h3><br> 
+            <h3>Russian: 2 weeks P250 <br> 3 weeks P285</h3><br> 
+          </div>
         </div>
-      </div>
-      <div class="col-12 col-sm-6 col-md-3">
-        <div class="card h-100 p-3">
-          <h1>Make Up</h1>
-          <h3>Natural Glam - P350+</h3>
-          <p>Flawless everyday glam for any occasion.</p>
-          <h3>Soft Glam - P400+</h3>
-          <p>Perfect for a fast refresh or touch-up on the go.</p>
-          <h3>Just Eyes - P95+</h3>
-          <p>Includes eyeshadow, liner, and lashes for a bold look.</p>
-          <h3>Full Glam - P465+</h3>
-          <p>Test your pagentry look before the big day.</p>
+        
+        <!-- Make Up -->
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="card">
+            <h1>Make Up</h1>
+            <h3>Natural Glam - P350+</h3>
+            <p>Flawless everyday glam for any occasion.</p>
+            <h3>Soft Glam - P400+</h3>
+            <p>Perfect for a fast refresh or touch-up on the go.</p>
+            <h3>Just Eyes - P95+</h3>
+            <p>Includes eyeshadow, liner, and lashes for a bold look.</p>
+            <h3>Full Glam - P465+</h3>
+            <p>Test your pagentry look before the big day.</p>
+          </div>
         </div>
-      </div>
-      <div class="col-12 col-sm-6 col-md-3">
-        <div class="card h-100 p-3">
-          <h1>Synthetic Wig Services</h1>
-          <h3>Installation + Commission - P200+</h3>
-          <p>Professional wig installation for a natural, seamless look.</p>
-          <h3>Labour (Adding Bundles Only) - P180+</h3>
-          <p>Quick service to add extra bundles for volume or length.</p>
-          <h3>Buy Bundles For You - P280+</h3>
-          <p>We’ll source and provide quality bundles tailored to your style.</p>
-          <h3>Full Glam Wig Styling - P465+</h3>
-          <p>Complete customization with cutting, styling, and finishing.</p>
+        
+        <!-- Synthetic Wig Services -->
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="card">
+            <h1>Synthetic Wig Services</h1>
+            <h3>Installation + Commission - P200+</h3>
+            <p>Professional wig installation for a natural, seamless look.</p>
+            <h3>Labour (Adding Bundles Only) - P180+</h3>
+            <p>Quick service to add extra bundles for volume or length.</p>
+            <h3>Buy Bundles For You - P280+</h3>
+            <p>We'll source and provide quality bundles tailored to your style.</p>
+            <h3>Full Glam Wig Styling - P465+</h3>
+            <p>Complete customization with cutting, styling, and finishing.</p>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
-
+  </section>
 
   <!-- Testimonial Section -->
   <section class="testimonial">
-      <img src="Makeup images/aq.png" alt="logo" class="img-fluid mt-3">
+   <img src="Makeup images/aq.png" alt="logo" style="max-width:450px;">
     <h1>Join the family by clicking the icons and follow our pages:</h1>
     <a href="https://www.instagram.com/reel/DIpbS0Qo4oN/" target="_blank">
       <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram" style="width:40px;height:40px; margin-right:15px;">
@@ -352,7 +630,6 @@
   </section>
 
   <!-- Footer -->
-<!-- Footer -->
 <footer class="bg-dark text-white py-5">
   <div class="container d-flex flex-wrap justify-content-between">
     <div>
@@ -385,7 +662,6 @@
 </footer>
 
   <!-- Scripts -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min
-
-  </body>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
 </html>
